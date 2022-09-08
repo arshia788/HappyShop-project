@@ -12,8 +12,9 @@
 }
 
 body{
-  /* height: 200vh; */
+  height: 200vh;
   font-family: 'IRANSansX-Light';
   text-transform: capitalize;
   background-color: rgb(212, 212, 212);
+  
 }

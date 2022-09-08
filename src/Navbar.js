@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import {makeStyles, Typography} from '@material-ui/core';
 
 // icons
@@ -20,9 +21,8 @@ const useStyles=makeStyles((theme)=>({
         alignItems:"center",
         color:"#fff",
         padding:theme.spacing(1.5),
-        width:(props)=>  props.move ? '100%':'80%',
+        width:(props)=>  props.move ? '100%':'90%',
         margin:'auto',
-        borderRadius:(props)=> props.move ?'0' :'5px',
         position:"fixed",
         top:'0px',
         left:'0',
@@ -30,6 +30,8 @@ const useStyles=makeStyles((theme)=>({
         boxSizing:'border-box',
         padding:'20px',
         zIndex:'2',
+        borderEndStartRadius: (props)=> props.move ?'0' :'10px' ,
+        borderEndEndRadius:   (props)=> props.move ?'0' :'10px'  ,
         [theme.breakpoints.down('xs')]:{
             boxSizing:'border-box',
             padding:'13px'
@@ -124,9 +126,9 @@ const Navbar = () => {
             </Typography>
 
             <ul className={classes.list}>
-                <li className={classes.li}>home</li>
-                <li className={classes.li}>phones</li>
-                <li className={classes.li}>perfumes</li>
+                <li className={classes.li}> <Link to='/happyshop' style={{color:'#fff', textDecoration:'none'}}>home</Link>     </li>
+                <li className={classes.li}> <Link to='/happyshop/phones' style={{color:'#fff', textDecoration:'none'}}>phones</Link>   </li>
+                <li className={classes.li}> <Link to='/happyshop/perfumes' style={{color:'#fff', textDecoration:'none'}}>perfumes</Link> </li>
             </ul>
 
 

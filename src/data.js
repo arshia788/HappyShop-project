@@ -81,7 +81,8 @@ const data=[
         name:'iphone13 pro',
         category:'mobile',
         price:50000000,
-        type:'normal',
+        type:'discount',
+        priceDiscount:45000000,
     }
 
     ,
@@ -129,7 +130,7 @@ const data=[
         category:'mobile',
         price:2000000,
         type:'discount',
-        priceDiscount:'1990000',
+        priceDiscount:1990000,
     }
 
     ,
@@ -142,7 +143,7 @@ const data=[
         category:'mobile',
         price:4000000,
         type:'discount',
-        priceDiscount:'3500000',
+        priceDiscount:3500000,
     }
 
     ,
@@ -154,6 +155,7 @@ const data=[
         name:'samsung Z Flip',
         category:'mobile',
         price:4100000,
+        type:'normal',
     }
     ,
     // lg
@@ -165,6 +167,7 @@ const data=[
         name:'LG velvet 5',
         category:'mobile',
         price:1000000,
+        type:'normal',
     }
     ,
 
@@ -175,6 +178,7 @@ const data=[
         name:'LG velvet pro',
         category:'mobile',
         price:4000000,
+        type:'normal',
     }
     ,
 
@@ -185,6 +189,7 @@ const data=[
         name:'LG V50',
         category:'mobile',
         price:4100000,
+        type:'normal',
     }
     ,
 
@@ -195,6 +200,7 @@ const data=[
         name:'LG V50',
         category:'mobile',
         price:4100000,
+        type:'normal',
     }
     ,
 
@@ -205,6 +211,8 @@ const data=[
         name:'LG V60',
         category:'mobile',
         price:4100000,
+        type:'discount',
+        priceDiscount:3800000
     }
     ,
 
@@ -217,6 +225,7 @@ const data=[
         name:'Xiaomi12',
         category:'mobile',
         price:4100000,
+        type:'normal',
     }
     ,
 
@@ -227,6 +236,7 @@ const data=[
         name:'XiaomiMi11Pro',
         category:'mobile',
         price:5000000,
+        type:'normal',
     }
     ,
 
@@ -237,6 +247,7 @@ const data=[
         name:'Xiaomi12pro',
         category:'mobile',
         price:5100000,
+        type:'normal',
     }
     ,
 

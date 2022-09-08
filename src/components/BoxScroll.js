@@ -1,5 +1,7 @@
-import React, {useState, useContext} from 'react';
+import React, {useState, useContext, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core';
+
 
 // icons
 import { Icon } from 'react-icons-kit';
@@ -20,11 +22,14 @@ const useStyles=makeStyles((theme)=>({
         height:'auto',
         // border:'1px solid black',
         boxSizing:'border-box',
-        padding:'20px'
+        padding:'20px',
+        [theme.breakpoints.down('xs')]:{
+            padding:'5px'
+        }
     },
 
     box:{
-        width:'81%',
+        width:'93%',
         // padding:'10px',
         margin:'auto',
         height:'450px',
@@ -33,26 +38,30 @@ const useStyles=makeStyles((theme)=>({
         background:'#fff',
         overflow:'hidden',
         position:'relative',
+        transition:'all .3s ease',
+        [theme.breakpoints.down('xs')]:{
+            width:'100%'
+        }
     },
 
     img:{
         width:'100%',
-        height:'100%'
+        height:'100%',
+        objectFit:'cover'
     },
 
-    info:{
-        position:'absolute',
-        left:'0',
-        top:"40px",
-        "&:hover":{
-            left:'50px'
-        }
-    },
 
     control:{
         position:'absolute',
         bottom:'20px',
         right:'10px',
+    },
+
+    icon:{
+        transition:'all .3s ease',
+        "&:hover":{
+            color:'crimson'
+        }
     }
 
 }))
@@ -62,24 +71,51 @@ const BoxScroll = () => {
     const classes= useStyles()
 
     const {items, setItems}=useContext(ItemProvider)
-
     const [index, setIndex]=useState(0)
-
     const filtered= headPhones(items)
-    
-    const {id, image, name  , price}=filtered[index]
+    const {id, image}=filtered[index]
+
+
+    useEffect(()=>{
+
+        let slider= setInterval(()=>{
+            setIndex((index)=>{
+                let sliderIndex= index + 1
+                return checkIndex(sliderIndex)
+            })
+        },3300)
+
+        return ()=> clearInterval(slider)
+
+    },[index])
+
+
+    const checkIndex=(number)=>{
+
+        const indexItem=filtered.length -1
+
+        if(number < 0){
+            return indexItem
+        }
+
+        if(number > indexItem){
+            return 0
+        }
+
+        return number
+    }
 
     const nextSlide=()=>{
         setIndex((index)=>{
             const newIndex= index + 1
-            return newIndex
+            return checkIndex(newIndex)
         })
     }
 
     const prevSlide=()=>{
         setIndex((index)=>{
             const newIndex= index - 1
-            return newIndex
+            return checkIndex(newIndex)
         })
     }
 
@@ -89,18 +125,19 @@ const BoxScroll = () => {
     return (
         <div className={classes.container}>
 
-            <div className={classes.box}>
+            <div className={classes.box} >
 
+            <Link to={`/happyshop/${id}`}>
                 <img className={classes.img} src={image} />
+            </Link>
 
-                <div className={classes.info}>
-                    <span style={{fontSize:'2.3rem', color:'navy'}}>{name}</span>
-                    <p >{price}</p>
-                </div>
+                
 
                 <div className={classes.control}>
-                    <Icon onClick={prevSlide} icon={arrowCurveLeft} size={30}/>
-                    <Icon onClick={nextSlide} style={{marginLeft:'30px'}} icon={arrowCurveRight} size={30}/>
+                    <Icon onClick={prevSlide}  icon={arrowCurveLeft} size={30} className={classes.icon}/>
+                    <Icon onClick={nextSlide} style={{marginLeft:'10px'}} className={classes.icon} 
+                    
+                    icon={arrowCurveRight} size={30}/>
                 </div>
             </div>
             
