@@ -7,9 +7,9 @@ import Discounts from './components/Discounts';
 
 const useStyles=makeStyles((theme)=>({
     container:{
-        marginTop:'130px',
+        marginTop:'150px',
         [theme.breakpoints.down('xs')]:{
-            marginTop:'180px',
+            marginTop:'210px',
 
         }
     }

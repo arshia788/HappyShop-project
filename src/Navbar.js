@@ -29,6 +29,7 @@ const useStyles=makeStyles((theme)=>({
         right:'0',
         boxSizing:'border-box',
         padding:'20px',
+        zIndex:'2',
         [theme.breakpoints.down('xs')]:{
             boxSizing:'border-box',
             padding:'13px'
@@ -37,15 +38,15 @@ const useStyles=makeStyles((theme)=>({
     },
 
     h1:{
-        fontSize:'2.1rem'
+        fontSize:'2.1rem',
+        [theme.breakpoints.down('xs')]:{
+            fontSize:'1.8rem',
+        }
     },
 
     list:{
         transition:'all .3s ease',
         display:'flex',
-        justifyContent:'space-between',
-        alignItems:'center',
-        width:'20%',
         cursor:"pointer",
         [theme.breakpoints.down('xs')]:{
             position:'absolute',
@@ -62,11 +63,16 @@ const useStyles=makeStyles((theme)=>({
 
     li:{
         transition:"all .3s ease",
-        margin:'0 10px 0 10px',
+        margin:'10px',
         fontSize:'1.2rem',
         [theme.breakpoints.down('xs')]:{
             padding:'10px 0 10px 5px',
-            fontSize:'1.1rem'
+            fontSize:'1rem'
+            
+        },
+        [theme.breakpoints.down('sm')]:{
+            padding:'10px 0 10px 5px',
+            fontSize:'1rem'
             
         }
     },
