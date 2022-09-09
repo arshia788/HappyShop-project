@@ -105,6 +105,7 @@ const useStyles=makeStyles((theme)=>({
         }, 
     }
     ,
+
     categorySpan:{
         color:'black', 
         fontSize:'1.3rem', 
@@ -145,7 +146,7 @@ const PerfumesSircle = () => {
     const classes =useStyles()
 
     const {items} = useContext(ItemProvider)
-    const[index, setIndex]=useState(0)
+    const [index, setIndex]=useState(0)
 
     const diorItem= diorFilter(items)
     console.log(diorItem)
