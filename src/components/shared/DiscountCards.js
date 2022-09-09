@@ -13,6 +13,13 @@ const useStyles=makeStyles((theme)=>({
         boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
         background:'#fff',
         position:'relative',
+        transition:"all .3s ease",
+        transform:'scale(1)',
+        "&:hover":{
+            
+            transform:'scale(1.1)',
+        },
+
         [theme.breakpoints.down('xs')]:{
             width:'45%',
             marginTop:theme.spacing(2)
