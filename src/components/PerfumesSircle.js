@@ -19,7 +19,7 @@ const useStyles=makeStyles((theme)=>({
         height: '600px',
         position: 'relative',
         [theme.breakpoints.down('xs')]:{
-            height:'850px'
+            height:'800px',
         }
     }
 ,
@@ -89,7 +89,27 @@ const useStyles=makeStyles((theme)=>({
             justifyContent:'center',
             alignItems:'center',
             flexDirection:'column',
-            padding:'0px 70px 10px'
+            // padding:'0px 70px 10px'
+        }
+    }
+    ,
+
+    category:{
+        color:'crimson', 
+        fontSize:'1.5rem', 
+        marginBottom:'10px',
+        [theme.breakpoints.down('xs')]:{
+            display:'flex',
+            justifyContent:'space-between', 
+            alignItems:'center'
+        }, 
+    }
+    ,
+    categorySpan:{
+        color:'black', 
+        fontSize:'1.3rem', 
+        [theme.breakpoints.down('xs')]:{
+            marginLeft:'10px',
         }
     }
     ,
@@ -149,14 +169,14 @@ const PerfumesSircle = () => {
                     <p style={{marginBottom:'20px',fontSize:'1.5rem', 
                      fontWeight:'900', color:'navy'}} >{name}</p>
 
-                    <p style={{color:'crimson', fontSize:'1.5rem', marginBottom:'10px'}}>
                         
-                    category: <span style={{color:'black', fontSize:'1.3rem'}}>{category}</span> </p>
+                    <p className={classes.category}>
+                    category: <span className={classes.categorySpan}>{category}</span> </p>
 
 
                     <p className={classes.p} style={{marginBottom:'10px',}}> <span style={{color:'crimson', fontSize:'1.5rem'}}>info: </span> {info}</p>
 
-                    <p style={{color:'crimson', fontSize:'1.5rem', marginBottom:'15px'}}>price: <span style={{color:'black', fontSize:'1.4rem'}}>{splitNumber(price)}</span> </p>
+                    <p style={{color:'crimson', fontSize:'1.5rem', marginBottom:'15px', }}>price: <span style={{color:'black', fontSize:'1.2rem'}}>{splitNumber(price)}</span> </p>
 
                     <button className={classes.button}>
                         <Link to={`/happyshop/${id}`} className={classes.link} >details</Link>

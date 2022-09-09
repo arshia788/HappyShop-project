@@ -15,15 +15,15 @@ const useStyles=makeStyles((theme)=>({
         position:'relative',
         transition:"all .3s ease",
         transform:'scale(1)',
+        marginTop:theme.spacing(1.3),
         "&:hover":{
-            
             transform:'scale(1.1)',
         }
         ,
 
         [theme.breakpoints.down('xs')]:{
             width:'47%',
-            marginTop:theme.spacing(2)
+            marginTop:theme.spacing(3.5)
         }
     },
 
@@ -83,7 +83,7 @@ const useStyles=makeStyles((theme)=>({
             marginBottom:theme.spacing(1.5),
             marginRight:'0',
         }
-,
+        ,
         [theme.breakpoints.down('sm')]:{
             marginBottom:theme.spacing(1.5),
             marginRight:'0',
@@ -103,8 +103,8 @@ const useStyles=makeStyles((theme)=>({
         paddingBottom:theme.spacing(1.3),
         cursor:'pointer',
         marginTop:theme.spacing(1.3),
-    },
-
+    }
+    ,
     button:{
         background:'navy',
         padding:'5px',
@@ -134,7 +134,7 @@ const DiscountCards = ({data}) => {
             </div>
 
             <div className={classes.pricies}>
-                <p className={classes.nowPrice}> <s> {splitNumber(data.price)} </s></p>
+                <p className={classes.nowPrice}> <s>{splitNumber(data.price)} </s></p>
                 <p className={classes.disPrice}>{splitNumber(data.priceDiscount)}</p>
             </div>
 
