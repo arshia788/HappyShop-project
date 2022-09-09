@@ -293,6 +293,7 @@ const data=[
         category:'perfume',
         price:2000000,
         type:'normal',
+        info: "Sauvage was launched in 2015. The nose behind this fragrance is Francois Demachy. Top notes are Calabrian bergamot; middle notes are Sichuan Pepper, Lavender; base notes are Ambroxan, Cedar."
     }
     ,
 

@@ -124,7 +124,6 @@ const useStyles=makeStyles((theme)=>({
 const DiscountCards = ({data}) => {
 
     const classes= useStyles()
-    console.log(data)
 
     return (
         <div className={classes.card}>

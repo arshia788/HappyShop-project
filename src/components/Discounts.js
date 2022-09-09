@@ -61,7 +61,6 @@ const Discounts = () => {
     const {items} = useContext(ItemProvider)
 
     const discount= discountsFilter(items)
-    console.log(discount)
 
     return (
         <div className={classes.container}>
