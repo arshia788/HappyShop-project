@@ -1,35 +1,27 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
+
 import style from './perfumeSircle.module.css'
 
+import diorsauvage from '../images/perfumes/Diorsauvage.jpg'
 
-const useStyles=makeStyles((theme)=>({
-    container:{
-        marginTop:theme.spacing(5.3)
-    },
 
-    holder:{
-        width:'90%',
-        margin:'auto',
-        border:'1px solid black',
-    }
-}))
+// const useStyles=makeStyles((theme)=>({
+//     container:{
+//         marginTop:theme.spacing(5.3),
+//         width:'100%'
+//     }
+// }))
 
 const PerfumesSircle = () => {
 
-    const classes= useStyles()
 
     return (
-        <div className={classes.container}>
-
-            <div className={classes.holder}>
-                <div>
-                    <p>tomFords perfumes</p>
-                </div>
-
-                <div className={classes.holderCards}>
-
-                </div>
+        <div className={style.container}>
+            <img src={diorsauvage} className={style.img}/>
+            
+            <div className={style.box}>
+                
             </div>
 
         </div>

@@ -21,7 +21,6 @@ const useStyles=makeStyles((theme)=>({
         justifyContent:'space-between',
         alignItems:"center",
         color:"#fff",
-        padding:theme.spacing(1.5),
         width:(props)=>  props.move ? '100%':'90%',
         margin:'auto',
         position:"fixed",
@@ -29,8 +28,8 @@ const useStyles=makeStyles((theme)=>({
         left:'0',
         right:'0',
         boxSizing:'border-box',
-        padding:'20px',
-        zIndex:'2',
+        padding:'15px',
+        zIndex:'10',
         borderEndStartRadius: (props)=> props.move ?'0' :'10px' ,
         borderEndEndRadius:   (props)=> props.move ?'0' :'10px'  ,
         [theme.breakpoints.down('xs')]:{
@@ -86,9 +85,6 @@ const useStyles=makeStyles((theme)=>({
         justifyContent:'space-between',
         alignItems:'center',
         cursor:'pointer',
-        // [theme.breakpoints.down('xs')]:{
-        //     display:'none'
-        // }
     },
 
     btn:{

@@ -22,7 +22,7 @@ const useStyles=makeStyles((theme)=>({
         ,
 
         [theme.breakpoints.down('xs')]:{
-            width:'45%',
+            width:'47%',
             marginTop:theme.spacing(2)
         }
     },
@@ -52,7 +52,7 @@ const useStyles=makeStyles((theme)=>({
 
     pricies:{
         width:'95%',
-        paddingBottom:theme.spacing(3.3),
+        paddingBottom:theme.spacing(2.3),
         paddingLeft:'5px',
         marginTop:theme.spacing(2.3),
         display:'flex',
@@ -67,7 +67,8 @@ const useStyles=makeStyles((theme)=>({
             justifyContent:'center',
             flexDirection:'column',
             alignItems:'center'
-        }
+        },
+        borderBottom:'1px solid #999'
     },
 
     nowPrice:{
@@ -87,13 +88,34 @@ const useStyles=makeStyles((theme)=>({
             marginBottom:theme.spacing(1.5),
             marginRight:'0',
 
-        }
+        },
 
     },
 
     disPrice:{
         padding:'4px 5px',
         width:'fit-content',
+    },
+
+    btn:{
+        width:'100%',
+        textAlign:'center',
+        paddingBottom:theme.spacing(1.3),
+        cursor:'pointer',
+        marginTop:theme.spacing(1.3),
+    },
+
+    button:{
+        background:'navy',
+        padding:'5px',
+        border:'none',
+        borderRadius:'5px',
+        color:'#fff',
+        transition:'all .3s ease',
+        cursor:'pointer',
+        "&:hover":{
+            background:'crimson'
+        }
     }
 
 
@@ -115,6 +137,10 @@ const DiscountCards = ({data}) => {
             <div className={classes.pricies}>
                 <p className={classes.nowPrice}> <s> {splitNumber(data.price)} </s></p>
                 <p className={classes.disPrice}>{splitNumber(data.priceDiscount)}</p>
+            </div>
+
+            <div className={classes.btn}>  
+                <button className={classes.button}>add-cart</button>
             </div>
 
         </div>
