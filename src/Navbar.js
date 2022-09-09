@@ -6,6 +6,7 @@ import {makeStyles, Typography} from '@material-ui/core';
 import { Icon } from 'react-icons-kit';
 import { home } from 'react-icons-kit/icomoon/home';
 import {cross} from 'react-icons-kit/entypo/cross';
+import {shoppingBasket} from 'react-icons-kit/fa/shoppingBasket'
 
 import {instagram} from 'react-icons-kit/fa/instagram';
 import {facebookSquare} from 'react-icons-kit/fa/facebookSquare'
@@ -85,9 +86,9 @@ const useStyles=makeStyles((theme)=>({
         justifyContent:'space-between',
         alignItems:'center',
         cursor:'pointer',
-        [theme.breakpoints.down('xs')]:{
-            display:'none'
-        }
+        // [theme.breakpoints.down('xs')]:{
+        //     display:'none'
+        // }
     },
 
     btn:{
@@ -133,10 +134,9 @@ const Navbar = () => {
 
 
             <div className={classes.social}>
-                <Icon icon={instagram} size={27} style={{color:"#fff"}}/>
-                <Icon icon={facebookSquare} size={27} style={{color:"#fff"}}/>
-                <Icon icon={twitterSquare} size={27} style={{color:"#fff"}}/>
-
+                <Link to='/happyshop/purchases'>
+                    <Icon icon={shoppingBasket} size={27} style={{color:"#fff"}}/>
+                </Link>
             </div>
 
             <button className={classes.btn} onClick={()=> setList(!list)}>

@@ -22,21 +22,32 @@ const useStyles=makeStyles((theme)=>({
         margin:'auto',
     },
 
+    textFiled:{
+        [theme.breakpoints.down('xs')]:{
+            width:'100%',
+            display:'flex',
+            justifyContent:'center'
+        }
+    },
+
     text:{
         borderBottom:'4px solid crimson',
         width:'9%',
         borderEndEndRadius:'10px',
         [theme.breakpoints.down('xs')]:{
-            width:'28%'
+            width:'31%',
         }
     },
 
     holderCards:{
         display:'flex',
         justifyContent:'space-between',
-        alignItems:'center',
         flexWrap:'wrap !important',
         marginTop:theme.spacing(2.3),
+        [theme.breakpoints.down('sm')]:{
+            display:'flex',
+            flexWrap:'wrap'
+        }
 
     }
 
@@ -57,7 +68,9 @@ const Discounts = () => {
 
             <div className={classes.mainBox}>
 
-                <h2 className={classes.text}>discounts</h2>
+                <div className={classes.textFiled}>
+                    <h2 className={classes.text}>discounts</h2>
+                </div>
 
                 <div className={classes.holderCards}>
 

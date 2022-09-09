@@ -31,6 +31,26 @@ import XiaomiMi11Pro from './images/XiaomiMi11Pro.jpg'
 import Xiaomi12pro from './images/Xiaomi-12-Pro-2.jpg'
 
 
+// perfumes
+
+// chanel
+import bluechanel from './images/perfumes/bluethechanel.jpg'
+
+// dior
+import diorsauvage from './images/perfumes/Diorsauvage.jpg'
+import diorhommeintense from './images/perfumes/Diorhommeintense.jpg'
+
+
+// tomford
+
+import fucking from './images/perfumes/fucking-fabulous-1.jpg';
+import oudwood from './images/perfumes/oud-wood.webp';
+import tobacco from './images/perfumes/tomford-tobaccovanille.jpg';
+
+
+
+
+
 
 
 const data=[
@@ -247,6 +267,77 @@ const data=[
         name:'Xiaomi12pro',
         category:'mobile',
         price:5100000,
+        type:'normal',
+    }
+    ,
+
+    // perfumes
+
+    {
+        id:19,
+        brand:'chanel',
+        image:bluechanel,
+        name:'blue The Chanel',
+        category:'perfume',
+        price:2000000,
+        type:'normal',
+    }
+    ,
+
+    // dior
+    {
+        id:20,
+        brand:'dior',
+        image:diorsauvage,
+        name:'dior sauvage',
+        category:'perfume',
+        price:2000000,
+        type:'normal',
+    }
+    ,
+
+    {
+        id:21,
+        brand:'dior',
+        image:diorhommeintense,
+        name:'dior homme intense',
+        category:'perfume',
+        price:3000000,
+        type:'normal',
+    }
+    ,
+
+    // tom ford
+
+    {
+        id:22,
+        brand:'tomford',
+        image:fucking,
+        name:'tomford fucking Fabulous',
+        category:'perfume',
+        price:1000000,
+        type:'normal',
+    }
+    ,
+
+    {
+        id:23,
+        brand:'tomford',
+        image:oudwood,
+        name:'tomford oudwood',
+        category:'perfume',
+        price:1400000,
+        type:'normal',
+    }
+    ,
+
+    {
+        id:24,
+        brand:'tomford',
+        image:tobacco,
+        name:'tomford tobacco-vanille',
+        category:'perfume',
+        price:1700000,
         type:'normal',
     }
     ,
