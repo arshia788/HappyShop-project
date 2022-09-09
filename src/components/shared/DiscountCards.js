@@ -18,7 +18,8 @@ const useStyles=makeStyles((theme)=>({
         "&:hover":{
             
             transform:'scale(1.1)',
-        },
+        }
+        ,
 
         [theme.breakpoints.down('xs')]:{
             width:'45%',
