@@ -18,6 +18,9 @@ const useStyles=makeStyles((theme)=>({
         width: '100%',
         height: '600px',
         position: 'relative',
+        [theme.breakpoints.down('xs')]:{
+            height:'850px'
+        }
     }
 ,
 
@@ -27,42 +30,79 @@ const useStyles=makeStyles((theme)=>({
         opacity: '.6',
     }
     ,
+
     box:{
         overflow: 'hidden',
         position: 'absolute',
-        top: '50px',
+        top: '100px',
         left: '50%',
         transform: 'translateX(-50%)',
         width: '70vw',
         background: 'rgb(255, 255, 255)',
         margin: 'auto',
-        height: '350px',
         zIndex: '3',
         opacity: '1',
         borderRadius: '13px',
         boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
         display: 'flex',
         justifyContent: 'flex-start',
+
+        [theme.breakpoints.down('xs')]:{
+            top:'10px',
+            display:'flex',
+            flexDirection:'column',
+            
+        }
     },
 
-    imgHolder:{
-        width: '300px',
-        height: '100%',
-        marginRight: '20px',
-    },
+    // imgHolder:{
+    //     width: '350px',
+    //     height: '100% ',
+    //     marginRight: '20px',
+    //     // [theme.breakpoints.down('xs')]:{
+    //     //     width:'100%',
+    //     //     height:'200px'
+    //     // }
+    // },
 
     imgDior:{
-        width: '100%',
+        width: '250px',
         height: '100%',
         objectFit: 'cover',
+        marginRight:'20px',
+        paddingBottom:theme.spacing(2),
+        [theme.breakpoints.down('xs')]:{
+            width:'100%',
+            height:'310px',
+            objectFit: 'cover',
+            margin:'0',
+        }
     }
     ,
 
+
     information:{
-        width: '70%',
         marginTop: '1rem',
+        paddingBottom:theme.spacing(1.3),
+        [theme.breakpoints.down('xs')]:{
+            display:'flex',
+            justifyContent:'center',
+            alignItems:'center',
+            flexDirection:'column',
+            padding:'0px 70px 10px'
+        }
     }
     ,
+
+    p:{
+        [theme.breakpoints.down('xs')]:{
+            display:'flex',
+            flexDirection:'column',
+            justifyContent:'center',
+            alignItems:'center',
+            margin:'5px'
+        }
+    },
 
     button:{
         border:'none',
@@ -70,7 +110,7 @@ const useStyles=makeStyles((theme)=>({
         background:'crimson',
         padding:'5px 10px',
         borderRadius:'5px',
-        border:'none'
+        border:'none',
     },
     
     link:{
@@ -114,9 +154,9 @@ const PerfumesSircle = () => {
                     category: <span style={{color:'black', fontSize:'1.3rem'}}>{category}</span> </p>
 
 
-                    <p style={{marginBottom:'10px',}}> <span style={{color:'crimson', fontSize:'1.5rem'}}>info:</span> {info}</p>
+                    <p className={classes.p} style={{marginBottom:'10px',}}> <span style={{color:'crimson', fontSize:'1.5rem'}}>info: </span> {info}</p>
 
-                    <p style={{color:'crimson', fontSize:'1.5rem', marginBottom:'20px'}}>price: <span style={{color:'black', fontSize:'1.4rem'}}>{splitNumber(price)}</span> </p>
+                    <p style={{color:'crimson', fontSize:'1.5rem', marginBottom:'15px'}}>price: <span style={{color:'black', fontSize:'1.4rem'}}>{splitNumber(price)}</span> </p>
 
                     <button className={classes.button}>
                         <Link to={`/happyshop/${id}`} className={classes.link} >details</Link>
