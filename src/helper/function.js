@@ -20,7 +20,13 @@ const diorFilter=(items)=>{
 }
 
 
+const perfumeFilter=(items)=>{
+    const prefumeFil= items.filter((product)=> product.category === "perfume")
+    return prefumeFil
+}
 
 
-export {headPhones, discountsFilter, splitNumber, diorFilter}
+
+
+export {headPhones, discountsFilter, splitNumber, diorFilter, perfumeFilter}
 

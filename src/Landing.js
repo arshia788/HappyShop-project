@@ -5,7 +5,7 @@ import { Grid, makeStyles } from '@material-ui/core';
 import BoxScroll from './components/BoxScroll';
 import Discounts from './components/Discounts';
 import PerfumesSircle from './components/PerfumesSircle';
-import Try from './components/Try';
+import SliderPhones from './components/SliderPhones';
 
 const useStyles=makeStyles((theme)=>({
     container:{
@@ -38,7 +38,7 @@ const Landing = () => {
                 </Grid>
 
                 <Grid item xs={12}>
-                    <Try />
+                    <SliderPhones />
                 </Grid>
 
             </Grid>

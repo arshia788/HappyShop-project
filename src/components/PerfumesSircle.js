@@ -149,10 +149,8 @@ const PerfumesSircle = () => {
     const [index, setIndex]=useState(0)
 
     const diorItem= diorFilter(items)
-    console.log(diorItem)
 
     const {image, info, name, price, category, id} = diorItem[index]
-    console.log(price)
 
     return (
         <div className={classes.container}>

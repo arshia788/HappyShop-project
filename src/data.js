@@ -31,31 +31,25 @@ import XiaomiMi11Pro from './images/XiaomiMi11Pro.jpg'
 import Xiaomi12pro from './images/Xiaomi-12-Pro-2.jpg'
 
 
-// perfumes
-
+// perfumes =>
 // chanel
 import bluechanel from './images/perfumes/bluethechanel.jpg'
 
 // dior
 import diorsauvage from './images/perfumes/Diorsauvage.jpg'
 import diorhommeintense from './images/perfumes/Diorhommeintense.jpg'
-
+import diorhommeintense1 from './images/perfumes/homme.webp'
 
 // tomford
-
 import fucking from './images/perfumes/fucking-fabulous-1.jpg';
 import oudwood from './images/perfumes/oud-wood.webp';
 import tobacco from './images/perfumes/tomford-tobaccovanille.jpg';
 
 
 
-
-
-
-
 const data=[
 
-    // headPhones
+    // headPhones=>
     // razer
     {
         id:1,
@@ -300,7 +294,7 @@ const data=[
     {
         id:21,
         brand:'dior',
-        image:diorhommeintense,
+        image:diorhommeintense1,
         name:'dior homme intense',
         category:'perfume',
         price:3000000,
@@ -314,7 +308,7 @@ const data=[
         id:22,
         brand:'tomford',
         image:fucking,
-        name:'tomford fucking Fabulous',
+        name:'tomford  Fabulous',
         category:'perfume',
         price:1000000,
         type:'normal',
@@ -336,7 +330,7 @@ const data=[
         id:24,
         brand:'tomford',
         image:tobacco,
-        name:'tomford tobacco-vanille',
+        name:'tomford tobaco-vanille',
         category:'perfume',
         price:1700000,
         type:'normal',
