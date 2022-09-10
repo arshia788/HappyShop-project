@@ -44,8 +44,14 @@ import fucking from './images/perfumes/fucking-fabulous-1.jpg';
 import oudwood from './images/perfumes/oud-wood.webp';
 import tobacco from './images/perfumes/tomford-tobaccovanille.jpg';
 
-
+// VIKTOR&ROLF
 import spicebomb from './images/perfumes/spicebomb.webp';
+
+// creed 
+import creed from './images/perfumes/creed.jpg'
+
+// montblanc
+import montblanc from './images/perfumes/montblanc.jpg'
 
 
 const data=[
@@ -347,6 +353,28 @@ const data=[
         name:'Spicebomb Extreme',
         category:'perfume',
         price:3320000,
+        type:'normal',
+    }
+    ,
+
+    {
+        id:26,
+        brand:'Montblanc',
+        image:montblanc,
+        name:'Mont Blanc Legend',
+        category:'perfume',
+        price:1550000,
+        type:'normal',
+    }
+    ,
+
+    {
+        id:27,
+        brand:'creed',
+        image:creed,
+        name:'Creed-aventus',
+        category:'perfume',
+        price:10400000,
         type:'normal',
     }
     ,
