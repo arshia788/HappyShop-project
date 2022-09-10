@@ -141,7 +141,7 @@ const useStyles=makeStyles((theme)=>({
 
 }))
 
-const PerfumesSircle = () => {
+const DiorPerfume = () => {
 
     const classes =useStyles()
 
@@ -188,4 +188,4 @@ const PerfumesSircle = () => {
     );
 };
 
-export default PerfumesSircle;
+export default DiorPerfume;

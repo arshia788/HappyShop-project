@@ -37,7 +37,6 @@ import bluechanel from './images/perfumes/bluethechanel.jpg'
 
 // dior
 import diorsauvage from './images/perfumes/Diorsauvage.jpg'
-import diorhommeintense from './images/perfumes/Diorhommeintense.jpg'
 import diorhommeintense1 from './images/perfumes/homme.webp'
 
 // tomford
@@ -330,7 +329,7 @@ const data=[
         id:24,
         brand:'tomford',
         image:tobacco,
-        name:'tomford tobaco-vanille',
+        name:'tomford tobaco-vanile',
         category:'perfume',
         price:1700000,
         type:'normal',

@@ -79,7 +79,7 @@ const options = {
 };
 
 
-const Try = () => {
+const SliderPerfumes = () => {
 
     const classes= useStyles()
 
@@ -92,7 +92,6 @@ const Try = () => {
             <div className={classes.textFiled}>
                 <h4 className={classes.text}>our perfumes</h4>
             </div>
-
             <OwlCarousel
             {...options}
             className='owl-theme'
@@ -100,7 +99,6 @@ const Try = () => {
             // dots
             nav
             >
-
             {
                 perfume.map((product)=> <PerfumeCards key={product.id} data={product}/>)
             }
@@ -111,4 +109,4 @@ const Try = () => {
     );
 };
 
-export default Try;
+export default SliderPerfumes;

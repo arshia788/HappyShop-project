@@ -19,7 +19,8 @@ const useStyles=makeStyles((theme)=>({
         transform:'scale(1)',
         color:'#fff',
         margin:'20px 0',
-        padding:'0 0 40px 0',
+        padding:'0 0 49px 0',
+
         [theme.breakpoints.down('xs')]:{
             width:'80%',
             marginLeft:'33px',
@@ -29,12 +30,13 @@ const useStyles=makeStyles((theme)=>({
             width:'80%',
             marginLeft:'33px',
             padding:'0 0 45px 0',
-        }
+        },
+
     },
 
     img:{
         width:'100%',
-        height:'150px',
+        height:'160px',
         objectFit:'cover'
     },
 
@@ -42,27 +44,33 @@ const useStyles=makeStyles((theme)=>({
         marginTop:theme.spacing(2.5),
         color:'#111',
         padding:'0 10px',
+        
     },
 
     name:{
-        fontWeight:'500',
-        fontSize:'.9rem',
+        fontWeight:'600',
+        fontSize:'1rem',
         marginBottom:'5px'
     },
 
 
     holderBtn:{
         marginTop:'20px',
-        textAlign:'center'
+        display:'flex  !important',
+        justifyContent:'center !important',
+        alignItems:'center !important'
     },
-
+    
     button:{
+        marginBottom:'10px',
         border:'none',
         padding:'5px 8px',
         borderRadius:'3px',
         background:'crimson',
         color:'#fff',
-    }
+    },
+
+
 
 }))
 
