@@ -27,7 +27,11 @@ const useStyles=makeStyles((theme)=>({
         [theme.breakpoints.down('xs')]:{ 
             justifyContent:'center',
         }
-        
+        ,
+        [theme.breakpoints.down('md')]:{ 
+            justifyContent:'center',
+        }
+
     }
 }))
 

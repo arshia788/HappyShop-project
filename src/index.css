@@ -22,3 +22,13 @@ body{
   background: none;
   color: crimson;
 }
+
+
+.owl-carousel .owl-nav button.owl-prev{
+  font-size: 1.4rem;
+}
+
+.owl-carousel .owl-nav button.owl-next{
+  margin-left: 20px;
+  font-size: 1.4rem;
+}

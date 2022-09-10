@@ -28,7 +28,7 @@ const perfumeFilter=(items)=>{
 
 const filterBoxPerfumes=(items)=>{
     const box = items.filter((product)=> product.name ==='tomford oudwood' || 
-    product.name === 'Spicebomb Extreme' ||product.name === 'Creed-aventus'||product.name === 'Mont Blanc Legend'  )
+    product.name === 'Spicebomb Extreme' || product.name === 'Creed-aventus'||product.name === 'Mont Blanc Legend'  )
     return box
 }
 
@@ -36,5 +36,6 @@ const filterBoxPerfumes=(items)=>{
 
 
 export {headPhones, discountsFilter, 
-    splitNumber, diorFilter, perfumeFilter, filterBoxPerfumes}
+    splitNumber, diorFilter, perfumeFilter, 
+    filterBoxPerfumes, }
 

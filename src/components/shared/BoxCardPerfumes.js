@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import { makeStyles } from '@material-ui/core';
 
 const useStyles=makeStyles((theme)=>({
@@ -17,7 +18,12 @@ const useStyles=makeStyles((theme)=>({
     img:{
         width:"100%",
         height:'100%',
-        objectFit:'cover'
+        objectFit:'cover',
+        opacity: '.8',
+        "&:hover":{
+            opacity:'1'
+        },
+        transition:'all .3s ease'
     }
 }))
 
@@ -27,7 +33,9 @@ const BoxCardPerfumes = ({data}) => {
 
     return (
         <div className={classes.box}>
-            <img className={classes.img} src={data.image} alt={data.name}/>
+            <Link to={`/happyshop/${data.id}`}>
+                <img className={classes.img} src={data.image} alt={data.name}/>
+            </Link>
         </div>
     );
 };
