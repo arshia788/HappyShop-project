@@ -7,7 +7,7 @@ import { splitNumber } from '../../helper/function';
 
 const useStyles=makeStyles((theme)=>({
     card:{
-        width:'55.23%',
+        width:'65.23%',
         borderRadius:'7px',
         overflow:'hidden',
         boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
@@ -18,17 +18,16 @@ const useStyles=makeStyles((theme)=>({
         transform:'scale(1)',
         color:'#fff',
         margin:'20px 0',
-        // padding:'0 0 49px 0',
+        padding:'0 0 10px 0',
         [theme.breakpoints.down('xs')]:{
             width:'80%',
             marginLeft:'33px',
-            // padding:'0 0 70px 0',
+            maxHeight:'285px',
         },
         
         [theme.breakpoints.down('md')]:{
             width:'80%',
             marginLeft:'33px',
-            // padding:'0 0 45px 0',
         },
 
     },
@@ -51,7 +50,8 @@ const useStyles=makeStyles((theme)=>({
         fontSize:'1rem',
         marginBottom:'5px',
         [theme.breakpoints.down('xs')]:{
-            fontSize:'.9rem'
+            fontWeight:'600',
+            fontSize:'.9rem',
         }
     },
 
@@ -62,9 +62,13 @@ const useStyles=makeStyles((theme)=>({
         justifyContent:'center !important',
         alignItems:'center !important',
     },
+
+    price:{
+        fontSize:'1rem'
+    },
     
     button:{
-        marginBottom:'10px',
+        // marginBottom:'10px',
         border:'none',
         padding:'5px 8px',
         borderRadius:'3px',
@@ -85,7 +89,7 @@ const PerfumeCards = ({data}) => {
 
             <div className={classes.info}>
                 <p className={classes.name}>{data.name}</p>
-                <p>{splitNumber(data.price)}</p>
+                <p className={classes.price}>{splitNumber(data.price)}</p>
             </div>
             
             <div className={classes.holderBtn}>
