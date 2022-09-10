@@ -45,6 +45,8 @@ import oudwood from './images/perfumes/oud-wood.webp';
 import tobacco from './images/perfumes/tomford-tobaccovanille.jpg';
 
 
+import spicebomb from './images/perfumes/spicebomb.webp';
+
 
 const data=[
 
@@ -329,9 +331,22 @@ const data=[
         id:24,
         brand:'tomford',
         image:tobacco,
-        name:'tomford tobaco-vanile',
+        name:'tomford tobaco-vanille',
         category:'perfume',
         price:1700000,
+        type:'normal',
+    }
+    ,
+
+    // VIKTOR&ROLF
+
+    {
+        id:25,
+        brand:'VIKTOR&ROLF',
+        image:spicebomb,
+        name:'Spicebomb Extreme',
+        category:'perfume',
+        price:3320000,
         type:'normal',
     }
     ,

@@ -76,7 +76,6 @@ const useStyles=makeStyles((theme)=>({
 
 const PerfumeCards = ({data}) => {
     
-    console.log(data)
 
     const classes= useStyles()
 

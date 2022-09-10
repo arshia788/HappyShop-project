@@ -26,7 +26,14 @@ const perfumeFilter=(items)=>{
 }
 
 
+const filterBoxPerfumes=(items)=>{
+    const box = items.filter((product)=> product.name ==='tomford oudwood' || product.name === 'Spicebomb Extreme')
+    return box
+}
 
 
-export {headPhones, discountsFilter, splitNumber, diorFilter, perfumeFilter}
+
+
+export {headPhones, discountsFilter, 
+    splitNumber, diorFilter, perfumeFilter, filterBoxPerfumes}
 
