@@ -33,11 +33,9 @@ const filterBoxPerfumes=(items)=>{
     return box
 }
 
-const findTag= (items)=>{
-    const tagP= items.find((product)=> product.type === 'discount')
-    console.log(tagP)
-    if(tagP){
-        return tagP
+const findTag = (items)=>{
+    if(items === 'discount'){
+        return true
     }else{
         return false
     }

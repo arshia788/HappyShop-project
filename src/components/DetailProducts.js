@@ -112,6 +112,8 @@ const DetailProducts = (props) => {
     const {items} = useContext(ItemProvider)
     const product = items[id - 1]
     const {image, price, name, info, brand, priceDiscount, type} = product
+    const yoyo= findTag(type)
+    console.log(yoyo)
 
     return (
         <div className={classes.container}>
@@ -133,6 +135,12 @@ const DetailProducts = (props) => {
 
                     <div className={classes.pricies}>
 
+                        {
+                            yoyo?
+                            <p className={classes.price}><s>{splitNumber(price)} </s> </p>
+                            :
+                            <p className={classes.price}>{splitNumber(price)}</p>
+                        }
 
                     </div>
 
@@ -141,7 +149,6 @@ const DetailProducts = (props) => {
                     {/* {
                         findTag(items, product)? 
                         <div className={classes.pricies}>
-                            <p className={classes.price}><s>{splitNumber(price)}</s></p>
 
                         </div>
                         :
