@@ -66,6 +66,7 @@ const data=[
         category:'headphone',
         price:1900000,
         type:'normal',
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
     
     ,
@@ -77,6 +78,8 @@ const data=[
         category:'headphone',
         price:1800000,
         type:'normal',
+        
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
     ,
     // logitech
@@ -88,6 +91,8 @@ const data=[
         category:'headphone',
         price:1700000,
         type:'normal',
+        
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
 
     ,
@@ -104,6 +109,8 @@ const data=[
         price:50000000,
         type:'discount',
         priceDiscount:45000000,
+        
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
 
     ,
@@ -116,6 +123,8 @@ const data=[
         category:'mobile',
         price:30000000,
         type:'normal',
+        
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
 
     ,
@@ -128,6 +137,8 @@ const data=[
         category:'mobile',
         price:10000000,
         type:'normal',
+        
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
 
     ,
@@ -141,6 +152,8 @@ const data=[
         category:'mobile',
         price:32000000,
         type:'normal',
+        
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     },
 
     {
@@ -152,6 +165,8 @@ const data=[
         price:2000000,
         type:'discount',
         priceDiscount:1990000,
+        
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
 
     ,
@@ -160,11 +175,12 @@ const data=[
         id:9,
         brand:'samsung',
         image:samsungsgalaxynote,
-        name:'samsung note20',
+        name:'samsung note 20',
         category:'mobile',
         price:4000000,
         type:'discount',
         priceDiscount:3500000,
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
 
     ,
@@ -177,6 +193,8 @@ const data=[
         category:'mobile',
         price:4100000,
         type:'normal',
+        
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
     ,
     // lg
@@ -189,6 +207,8 @@ const data=[
         category:'mobile',
         price:1000000,
         type:'normal',
+        
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
     ,
 
@@ -200,6 +220,8 @@ const data=[
         category:'mobile',
         price:4000000,
         type:'normal',
+        
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
     ,
 
@@ -211,6 +233,8 @@ const data=[
         category:'mobile',
         price:4100000,
         type:'normal',
+        
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
     ,
 
@@ -222,6 +246,8 @@ const data=[
         category:'mobile',
         price:4100000,
         type:'normal',
+        
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
     ,
 
@@ -233,7 +259,9 @@ const data=[
         category:'mobile',
         price:4100000,
         type:'discount',
-        priceDiscount:3800000
+        priceDiscount:3800000,
+        
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
     ,
 
@@ -247,6 +275,8 @@ const data=[
         category:'mobile',
         price:4100000,
         type:'normal',
+        
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
     ,
 
@@ -258,6 +288,8 @@ const data=[
         category:'mobile',
         price:5000000,
         type:'normal',
+        
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
     ,
 
@@ -269,6 +301,8 @@ const data=[
         category:'mobile',
         price:5100000,
         type:'normal',
+        
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
     ,
 
@@ -282,6 +316,8 @@ const data=[
         category:'perfume',
         price:2000000,
         type:'normal',
+        
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
     ,
 
@@ -306,6 +342,8 @@ const data=[
         category:'perfume',
         price:3000000,
         type:'normal',
+        
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
     ,
 
@@ -319,6 +357,8 @@ const data=[
         category:'perfume',
         price:1000000,
         type:'normal',
+        
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
     ,
 
@@ -330,6 +370,8 @@ const data=[
         category:'perfume',
         price:1400000,
         type:'normal',
+        
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
     ,
 
@@ -341,6 +383,8 @@ const data=[
         category:'perfume',
         price:1700000,
         type:'normal',
+        
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
     ,
 
@@ -354,6 +398,7 @@ const data=[
         category:'perfume',
         price:3320000,
         type:'normal',
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
     ,
 
@@ -365,6 +410,7 @@ const data=[
         category:'perfume',
         price:1550000,
         type:'normal',
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
     ,
 
@@ -376,6 +422,7 @@ const data=[
         category:'perfume',
         price:10400000,
         type:'normal',
+        info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
     ,
 
