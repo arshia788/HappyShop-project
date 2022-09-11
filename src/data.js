@@ -91,7 +91,6 @@ const data=[
         category:'headphone',
         price:1700000,
         type:'normal',
-        
         info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
 

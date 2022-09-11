@@ -1,3 +1,4 @@
+import { data } from "../data"
 
 const headPhones=(items)=>{
     const filterHeadphones= items.filter((product)=> product.category === "headphone")
@@ -32,6 +33,17 @@ const filterBoxPerfumes=(items)=>{
     return box
 }
 
+const findTag= (items)=>{
+    const tagP= items.find((product)=> product.type === 'discount')
+    console.log(tagP)
+    if(tagP){
+        return tagP
+    }else{
+        return false
+    }
+}
+
+
 
 
 
@@ -39,5 +51,5 @@ const filterBoxPerfumes=(items)=>{
 
 export {headPhones, discountsFilter, 
     splitNumber, diorFilter, perfumeFilter, 
-    filterBoxPerfumes, }
+    filterBoxPerfumes, findTag}
 

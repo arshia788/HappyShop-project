@@ -1,6 +1,11 @@
 import React, {useContext} from 'react';
 import { makeStyles } from '@material-ui/core';
 
+// function
+import { splitNumber } from '../helper/function';
+import { findTag } from '../helper/function';
+
+// context
 import { ItemProvider } from '../context/ItemProductProvider';
 import { ContextProvider } from '../context/ItemContextProvider';
 
@@ -30,12 +35,15 @@ const useStyles=makeStyles((theme)=>({
 
     imgHolder:{
         marginRight:'20px',
-        width:'750px',
+        width:'60%',
         height:'100%',
         [theme.breakpoints.down('xs')]:{
-            width:'450px',
-            marginBottom:theme.spacing(4.5)
-        }
+            width:'100%',
+            marginBottom:theme.spacing(4.5),
+            display:'flex',
+            justifyContent:'center',
+            alignItems:'center',
+        },
     },
     
     img:{
@@ -47,19 +55,42 @@ const useStyles=makeStyles((theme)=>({
 
     name:{
         marginBottom:theme.spacing(5),
-        fontSize:'1.5rem'
+        marginTop:theme.spacing(1.3),
+        fontSize:'1.5rem',
     },
 
-    
-
-    
-
     brand:{
-        
-    }
+        marginBottom:theme.spacing(3)
+    },
 
-,
+    infoProduct:{
+        marginBottom:theme.spacing(5.5),
+    },
 
+    pricies:{
+        display:'flex',
+        justifyContent:'space-between',
+        alignItems:'center',
+        width:'33%'
+
+    },
+
+    price:{
+        background:'crimson',
+        color:'#fff',
+        width:'fit-content',
+        padding:'3px 7px',
+        borderRadius:'5px',
+
+    },
+
+    priceDiscount:{
+        background:'navy',
+        color:'#fff',
+        width:'fit-content',
+        padding:'3px 7px',
+        borderRadius:'5px'
+    },
 
 
     boxRelated:{
@@ -78,10 +109,9 @@ const DetailProducts = (props) => {
     const classes= useStyles()
 
     const id = props.match.params.id
-    const {items}= useContext(ItemProvider)
-    const product= items[id - 1]
-    const {image, price, name, info, brand}= product
-
+    const {items} = useContext(ItemProvider)
+    const product = items[id - 1]
+    const {image, price, name, info, brand, priceDiscount, type} = product
 
     return (
         <div className={classes.container}>
@@ -101,10 +131,34 @@ const DetailProducts = (props) => {
                    <span style={{color:'crimson', fontSize:'1.2rem', fontWeight:'600'}}>info: </span>
                    {info}</p>
 
+                    <div className={classes.pricies}>
+
+
+                    </div>
+
+                   
+
+                    {/* {
+                        findTag(items, product)? 
+                        <div className={classes.pricies}>
+                            <p className={classes.price}><s>{splitNumber(price)}</s></p>
+
+                        </div>
+                        :
+                        <p className={classes.price}>{splitNumber(price)}</p>
+                    } */}
+
+
+                                       
+                        {/* <p className={classes.price}><s>{splitNumber(price)}</s></p> */}
+
+                        {/* {
+                            findTag(items, product)
+                        } */}
                 </div>
 
-                {/* <img /> */}
             </div>
+
 
             {/* <div className={classes.boxRelated}>
                     

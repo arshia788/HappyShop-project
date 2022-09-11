@@ -42,7 +42,6 @@ const BoxPerfumes = () => {
     const {items}= useContext(ItemProvider)
 
     const boxPerfumes=filterBoxPerfumes(items)
-    console.log(boxPerfumes)
 
     return (
         <div className={classes.container}>
