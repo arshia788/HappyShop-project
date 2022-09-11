@@ -26,8 +26,10 @@ const useStyles=makeStyles((theme)=>({
     },
 
     textFiled:{
+        // [theme.breakpoints.down('xs')]:{
+        //     width:'100%',
+        // }
         [theme.breakpoints.down('xs')]:{
-            width:'100%',
             display:'flex',
             justifyContent:'center'
         }
@@ -41,13 +43,18 @@ const useStyles=makeStyles((theme)=>({
         marginLeft:'20px',
         fontSize:'1.5rem',
         [theme.breakpoints.down('xs')]:{
-            width:'31%',
+            width:"40% !important"
+        },
+
+        [theme.breakpoints.down('sm')]:{
+            width:"15%"
         },
 
         [theme.breakpoints.down('md')]:{
-            width:'18%',
+            width:"20%"
         }
     },
+
 }))
 
 const options = {

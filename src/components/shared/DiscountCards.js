@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core';
 import { splitNumber } from '../../helper/function';
 
 const useStyles=makeStyles((theme)=>({
+
     card:{
         width:'23.23%',
         borderRadius:'7px',
@@ -20,9 +21,8 @@ const useStyles=makeStyles((theme)=>({
             transform:'scale(1.1)',
         }
         ,
-
         [theme.breakpoints.down('xs')]:{
-            width:'47%',
+            width:'46%',
             marginTop:theme.spacing(3.5)
         }
     },

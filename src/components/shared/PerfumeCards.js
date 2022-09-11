@@ -18,11 +18,12 @@ const useStyles=makeStyles((theme)=>({
         transform:'scale(1)',
         color:'#fff',
         margin:'20px 0',
-        padding:'0 0 10px 0',
+        padding:'0 0 20px 0',
         [theme.breakpoints.down('xs')]:{
             width:'80%',
             marginLeft:'33px',
-            maxHeight:'285px',
+            maxHeight:'345px',
+            marginLeft:'20px'
         },
         
         [theme.breakpoints.down('md')]:{
@@ -35,7 +36,10 @@ const useStyles=makeStyles((theme)=>({
     img:{
         width:'100%',
         height:'160px',
-        objectFit:'cover'
+        objectFit:'cover',
+        [theme.breakpoints.down('xs')]:{
+            height:'230px'
+        }
     },
 
     info:{
@@ -68,7 +72,6 @@ const useStyles=makeStyles((theme)=>({
     },
     
     button:{
-        // marginBottom:'10px',
         border:'none',
         padding:'5px 8px',
         borderRadius:'3px',

@@ -29,7 +29,7 @@ const useStyles=makeStyles((theme)=>({
         right:'0',
         boxSizing:'border-box',
         padding:'15px',
-        zIndex:'10',
+        zIndex:'5',
         borderEndStartRadius: (props)=> props.move ?'0' :'10px' ,
         borderEndEndRadius:   (props)=> props.move ?'0' :'10px'  ,
         [theme.breakpoints.down('xs')]:{
@@ -80,10 +80,11 @@ const useStyles=makeStyles((theme)=>({
     },
 
     social:{
-        width:"15%",
-        display:'flex',
-        justifyContent:'space-between',
-        alignItems:'center',
+        width:"18%",
+        [theme.breakpoints.down('xs')]:{
+            width:"18%",
+        }
+        ,
         cursor:'pointer',
     },
 

@@ -12,10 +12,10 @@
 }
 
 body{
-  height: 400vh;
+  height: 550vh;
   font-family: 'IRANSansX-Light';
   text-transform: capitalize;
-  background-color: rgb(170, 170, 170);
+  background-color: rgb(220, 220, 220);
 }
 
 .owl-theme .owl-nav [class*="owl-"]:hover{

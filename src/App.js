@@ -4,13 +4,12 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 // components
 import Navbar from './Navbar';
 import Landing from './Landing';
-import ItemContextProvider from './context/ItemContextProvider';
-
-
 import DetailProducts from './components/DetailProducts';
 import PhonesLanding from './components/PhonesLanding';
+import Footer from './Footer';
 
 // context
+import ItemContextProvider from './context/ItemContextProvider';
 
 
 
@@ -30,6 +29,7 @@ const App = () => {
         </Switch>
         
       </ItemContextProvider>
+      <Footer />
       
 
     </div>
