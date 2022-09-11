@@ -45,7 +45,7 @@ const useStyles=makeStyles((theme)=>({
     imgHolder:{
         marginRight:'20px',
         width:'60%',
-        height:'100%',
+        maxHeight:'453.783px',
         [theme.breakpoints.down('xs')]:{
             width:'100%',
             marginBottom:theme.spacing(4.5),
