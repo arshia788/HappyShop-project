@@ -44,6 +44,14 @@ const useStyles=makeStyles((theme)=>({
             justifyContent:'center',
             alignItems:'center',
         },
+
+        [theme.breakpoints.down('md')]:{
+            width:'100%',
+            marginBottom:theme.spacing(4.5),
+            display:'flex',
+            justifyContent:'center',
+            alignItems:'center',
+        },
     },
     
     img:{
@@ -71,7 +79,14 @@ const useStyles=makeStyles((theme)=>({
         display:'flex',
         justifyContent:'space-between',
         alignItems:'center',
-        width:'33%'
+        width:'37%',
+        [theme.breakpoints.down('sm')]:{
+            width:'60%',
+        },
+        [theme.breakpoints.down('xs')]:{
+            width:'80%',
+            margin:'auto !important',
+        },
 
     },
 
@@ -103,17 +118,31 @@ const useStyles=makeStyles((theme)=>({
         boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
     },
 
+    button:{
+        marginTop:theme.spacing(5),
+        border:'none',
+        background:'orange',
+        color:'#fff',
+        padding:'5px 10px',
+        cursor:'pointer',
+        borderRadius:'5px',
+        fontSize:'1.1rem'
+    }
+
 }))
 const DetailProducts = (props) => {
 
     const classes= useStyles()
 
+    const {state, dispatch}= useContext(ContextProvider)
+
     const id = props.match.params.id
     const {items} = useContext(ItemProvider)
     const product = items[id - 1]
     const {image, price, name, info, brand, priceDiscount, type} = product
+
+    // type ro dadi ta onja beri begi ke true hast on shart ya flase
     const yoyo= findTag(type)
-    console.log(yoyo)
 
     return (
         <div className={classes.container}>
@@ -133,35 +162,22 @@ const DetailProducts = (props) => {
                    <span style={{color:'crimson', fontSize:'1.2rem', fontWeight:'600'}}>info: </span>
                    {info}</p>
 
-                    <div className={classes.pricies}>
 
-                        {
-                            yoyo?
-                            <p className={classes.price}><s>{splitNumber(price)} </s> </p>
-                            :
-                            <p className={classes.price}>{splitNumber(price)}</p>
-                        }
-
-                    </div>
-
-                   
-
-                    {/* {
-                        findTag(items, product)? 
+                    {
+                        yoyo?
                         <div className={classes.pricies}>
-
+                            <p className={classes.price}><s>{splitNumber(price)} </s> </p>
+                            <p className={classes.priceDiscount}>{splitNumber(priceDiscount)}</p>
                         </div>
                         :
                         <p className={classes.price}>{splitNumber(price)}</p>
-                    } */}
+                    }
 
 
-                                       
-                        {/* <p className={classes.price}><s>{splitNumber(price)}</s></p> */}
+                    <button onClick={()=> dispatch({type:'add-item', payload:product})}
+                    className={classes.button}>add-item</button>
 
-                        {/* {
-                            findTag(items, product)
-                        } */}
+                    
                 </div>
 
             </div>

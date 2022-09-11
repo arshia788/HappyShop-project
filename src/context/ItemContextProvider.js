@@ -8,7 +8,7 @@ const initialState={
 const reducer=(state, action)=>{
     switch(action.type){
 
-        case "add-cart":
+        case "add-item":
             if(!state.addItems.find((item)=> item.id === action.payload.id)){
                 state.addItems.push({
                     ...action.payload,
@@ -47,6 +47,7 @@ export const ContextProvider= createContext()
 const ItemContextProvider = ({children}) => {
 
     const [state, dispatch]=useReducer(reducer, initialState);
+    console.log(state)
 
     return (
         <div>
