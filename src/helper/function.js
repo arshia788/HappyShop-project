@@ -59,12 +59,18 @@ const qtyCheck=(state, data)=>{
 }
 
 
+const itemQty=(state, data)=>{
+    const getItem = state.addItems.find((product)=> product.id === data.id)
+    return getItem
+}
 
 
 
 
 
-export {headPhones, discountsFilter,  qtyCheck,
+
+
+export {headPhones, discountsFilter,  qtyCheck, itemQty,
     splitNumber, diorFilter, perfumeFilter, 
     filterBoxPerfumes, findTag, inAddItems
 

@@ -4,12 +4,15 @@ import { makeStyles } from '@material-ui/core';
 
 // icon
 import PlusOneIcon from '@material-ui/icons/PlusOne';
+import ExposureNeg1Icon from '@material-ui/icons/ExposureNeg1';
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 
 // function
 import { splitNumber } from '../helper/function';
 import { findTag } from '../helper/function';
 import { inAddItems } from '../helper/function';
 import { qtyCheck } from '../helper/function';
+import { itemQty } from '../helper/function';
 
 // context
 import { ItemProvider } from '../context/ItemProductProvider';
@@ -133,20 +136,40 @@ const useStyles=makeStyles((theme)=>({
         cursor:'pointer',
         borderRadius:'5px',
         fontSize:'1.1rem'
+    },
+    
+    remove:{
+        border:'none',
+        borderRadius:'5px',
+        background:'crimson',
+        padding:'5px 10px',
+        color:'#fff',
+        cursor:'pointer',
+        marginRight:theme.spacing(2.5),
+    },
+    
+    minus:{
+        border:'none',
+        cursor:'pointer',
+        borderRadius:'5px',
+        background:'crimson',
+        padding:'5px 10px',
+        color:'#fff',
+        marginRight:theme.spacing(2.5),
     }
 
 }))
 const DetailProducts = (props) => {
 
     const classes= useStyles()
+    const {state, dispatch}= useContext(ContextProvider);
 
-    const {state, dispatch}= useContext(ContextProvider)
+    const id = props.match.params.id;
+    const {items} = useContext(ItemProvider);
+    const product = items[id - 1];
+    const {image, price, name, info, brand, priceDiscount,type} = product
+    const handleItem= findTag(type)
 
-    const id = props.match.params.id
-    const {items} = useContext(ItemProvider)
-    const product = items[id - 1]
-    const {image, price, name, info, brand, priceDiscount, type} = product
-    const yoyo= findTag(type)
 
 
     return (
@@ -166,11 +189,9 @@ const DetailProducts = (props) => {
                    <p className={classes.infoProduct}> 
                    <span style={{color:'crimson', fontSize:'1.2rem', fontWeight:'600'}}>info: </span>
                    {info}</p>
-
-
-
+                   
                     {
-                        yoyo?
+                        handleItem?
                         <div className={classes.pricies}>
                             <p className={classes.price}><s>{splitNumber(price)} </s> </p>
                             <p className={classes.priceDiscount}>{splitNumber(priceDiscount)}</p>
@@ -179,28 +200,28 @@ const DetailProducts = (props) => {
                         <p className={classes.price}>{splitNumber(price)}</p>
                     }
 
-                    {qtyCheck(state, product) === 1 && <button onClick={()=> dispatch({type:'remove', payload:product})}>remove-item</button>}
+                    {qtyCheck(state, product) === 1 &&
+                     <button className={classes.remove}
+                     onClick={()=> dispatch({type:'remove', payload:product})}><DeleteForeverIcon /></button>}
 
-                    {qtyCheck(state, product) > 1 && <button  onClick={()=> dispatch({type:'decrease', payload:product})}
-                    >-1</button>}
+
+                    {qtyCheck(state, product) > 1 && <button className={classes.minus}
+                     onClick={()=> dispatch({type:'decrease', payload:product})}>
+                        <ExposureNeg1Icon/></button>}
 
 
                     {
                         inAddItems(state, product)
                         ?
-                        
                             <button onClick={()=> dispatch({type:'increase', payload:product})}
                             className={classes.button}>
                                 <PlusOneIcon />
                             </button>
                         :
-                        
                             <button onClick={()=> dispatch({type:'add-item', payload:product})}
                             className={classes.button}>add-item</button>
-
                     }
 
-                    
                 </div>
 
             </div>
