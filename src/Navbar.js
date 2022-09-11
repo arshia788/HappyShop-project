@@ -120,7 +120,9 @@ const Navbar = () => {
     return (
         <nav className={classes.nav}>
             <Typography variant='h1' className={classes.h1} >
-                hsppy shop
+                <Link to='/happyshop' style={{color:'#fff', textDecoration:'none'}}>
+                    happy shop
+                </Link>
             </Typography>
 
             <ul className={classes.list}>

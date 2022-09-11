@@ -139,7 +139,10 @@ const DiscountCards = ({data}) => {
             </div>
 
             <div className={classes.btn}>  
-                <button className={classes.button}>details</button>
+                <button className={classes.button}>
+                    <Link to={`/happyshop/${data.id}`}
+                     style={{color:'#fff', textDecoration:'none'}}>details</Link>
+                </button>
             </div>
 
         </div>

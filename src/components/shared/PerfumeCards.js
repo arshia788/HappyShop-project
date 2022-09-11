@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 
 // function
@@ -79,7 +80,6 @@ const useStyles=makeStyles((theme)=>({
         color:'#fff',
         cursor:"pointer"
     },
-
 }))
 
 const PerfumeCards = ({data}) => {
@@ -97,7 +97,10 @@ const PerfumeCards = ({data}) => {
             </div>
             
             <div className={classes.holderBtn}>
-                <button className={classes.button}>details</button>
+                <button className={classes.button}>
+                    <Link to={`/happyshop/${data.id}`}     
+                        style={{color:'#fff', textDecoration:'none'}}>details</Link>
+                </button>
             </div>
 
         </div>
