@@ -60,8 +60,12 @@ const qtyCheck=(state, data)=>{
 
 
 const itemQty=(state, data)=>{
-    const getItem = state.addItems.find((product)=> product.id === data.id)
-    return getItem
+    const getItem = state.addItems.findIndex((product)=> product.id === data.id)
+    if(getItem){
+        return false
+    }else{
+        return state.addItems[getItem].qty
+    }
 }
 
 

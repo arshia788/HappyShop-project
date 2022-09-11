@@ -128,7 +128,6 @@ const useStyles=makeStyles((theme)=>({
     },
 
     button:{
-        marginTop:theme.spacing(5),
         border:'none',
         background:'orange',
         color:'#fff',
@@ -145,7 +144,6 @@ const useStyles=makeStyles((theme)=>({
         padding:'5px 10px',
         color:'#fff',
         cursor:'pointer',
-        marginRight:theme.spacing(2.5),
     },
     
     minus:{
@@ -155,7 +153,6 @@ const useStyles=makeStyles((theme)=>({
         background:'crimson',
         padding:'5px 10px',
         color:'#fff',
-        marginRight:theme.spacing(2.5),
     }
 
 }))
@@ -169,6 +166,8 @@ const DetailProducts = (props) => {
     const product = items[id - 1];
     const {image, price, name, info, brand, priceDiscount,type} = product
     const handleItem= findTag(type)
+    const final= itemQty(state, product)
+    console.log(final)
 
 
 
@@ -189,7 +188,7 @@ const DetailProducts = (props) => {
                    <p className={classes.infoProduct}> 
                    <span style={{color:'crimson', fontSize:'1.2rem', fontWeight:'600'}}>info: </span>
                    {info}</p>
-                   
+
                     {
                         handleItem?
                         <div className={classes.pricies}>
@@ -200,28 +199,39 @@ const DetailProducts = (props) => {
                         <p className={classes.price}>{splitNumber(price)}</p>
                     }
 
-                    {qtyCheck(state, product) === 1 &&
-                     <button className={classes.remove}
-                     onClick={()=> dispatch({type:'remove', payload:product})}><DeleteForeverIcon /></button>}
+                    <div style={{display:'flex', border:'1px solid black',marginTop:'10px',
+                    width:'30%', justifyContent:'space-between', alignItems:'center'}}>
+
+                        <div>
+                            {qtyCheck(state, product) === 1 &&
+                             <button className={classes.remove}
+                             onClick={()=> dispatch({type:'remove', payload:product})}><DeleteForeverIcon /></button>}
 
 
-                    {qtyCheck(state, product) > 1 && <button className={classes.minus}
-                     onClick={()=> dispatch({type:'decrease', payload:product})}>
-                        <ExposureNeg1Icon/></button>}
+                            {qtyCheck(state, product) > 1 && <button className={classes.minus}
+                             onClick={()=> dispatch({type:'decrease', payload:product})}>
+                            <ExposureNeg1Icon/></button>}
+                        </div>
+                        
+                        <p>{final}</p>
+                        
+                        
+                        <div>
 
-
-                    {
-                        inAddItems(state, product)
-                        ?
-                            <button onClick={()=> dispatch({type:'increase', payload:product})}
-                            className={classes.button}>
-                                <PlusOneIcon />
-                            </button>
-                        :
+                            {
+                                inAddItems(state, product)
+                                ?
+                                <button onClick={()=> dispatch({type:'increase', payload:product})}
+                                className={classes.button}>
+                                    <PlusOneIcon />
+                                </button>
+                            :
                             <button onClick={()=> dispatch({type:'add-item', payload:product})}
                             className={classes.button}>add-item</button>
-                    }
+                            }
 
+                        </div>
+                    </div>
                 </div>
 
             </div>
