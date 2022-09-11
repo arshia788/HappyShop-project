@@ -12,18 +12,20 @@ const useStyles=makeStyles((theme)=>({
     },
 
     box:{
-        width:'90%',
+        width:'85%',
         margin:'auto',
         position:'relative',
-        borderRadius:'10px',
+        borderRadius:'5px',
         overflow:'hidden',
         background:'#fff',
         boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
+        padding:'23px'
         
     },
-
+    
     img:{
         width:'300px',
+        borderRadius:'5px',
         height:'100%',
         objectFit:'cover',
 
@@ -63,7 +65,7 @@ const DetailProducts = (props) => {
                 <img className={classes.img}
                  src={image} alt={name}/>
             </div> */}
-            
+
         </div>
     );
 };
