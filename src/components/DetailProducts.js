@@ -116,16 +116,19 @@ const useStyles=makeStyles((theme)=>({
         borderRadius:'5px'
     },
 
-
-    boxRelated:{
-        width:'90%',
-        margin:' 50px auto',
-        position:'relative',
-        borderRadius:'10px',
-        overflow:'hidden',
-        background:'#fff',
-        boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
-    },
+    controllBtn:{
+        width:'37%', 
+        display:'flex', 
+        justifyContent:'space-between', 
+        alignItems:'center',
+        marginTop:'30px',
+        [theme.breakpoints.down('xs')]:{
+            width:'77%',
+            margin:'auto',
+            marginTop:'40px'
+        }
+    }
+    ,
 
     button:{
         border:'none',
@@ -153,7 +156,27 @@ const useStyles=makeStyles((theme)=>({
         background:'crimson',
         padding:'5px 10px',
         color:'#fff',
-    }
+    },
+
+    qty:{
+        background:'navy',
+        color:'#fff',
+        borderRadius:'5px',
+        fontSize:'1.1rem',
+        width:'40px',
+        textAlign:'center'
+    },
+
+
+    boxRelated:{
+        width:'90%',
+        margin:' 50px auto',
+        position:'relative',
+        borderRadius:'10px',
+        overflow:'hidden',
+        background:'#fff',
+        boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
+    },
 
 }))
 const DetailProducts = (props) => {
@@ -199,8 +222,7 @@ const DetailProducts = (props) => {
                         <p className={classes.price}>{splitNumber(price)}</p>
                     }
 
-                    <div style={{display:'flex', border:'1px solid black',marginTop:'10px',
-                    width:'30%', justifyContent:'space-between', alignItems:'center'}}>
+                    <div className={classes.controllBtn} >
 
                         <div>
                             {qtyCheck(state, product) === 1 &&
@@ -213,7 +235,7 @@ const DetailProducts = (props) => {
                             <ExposureNeg1Icon/></button>}
                         </div>
                         
-                        <p>{final}</p>
+                        <p className={classes.qty} >{final}</p>
                         
                         
                         <div>

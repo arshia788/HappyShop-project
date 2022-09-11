@@ -51,6 +51,7 @@ const inAddItems=(state, data)=>{
 
 const qtyCheck=(state, data)=>{
     const indexC = state.addItems.findIndex((product)=> product.id === data.id)
+    
     if(indexC){
         return false
     }else{
@@ -63,7 +64,8 @@ const itemQty=(state, data)=>{
     const getItem = state.addItems.findIndex((product)=> product.id === data.id)
     if(getItem){
         return false
-    }else{
+    }
+    else{
         return state.addItems[getItem].qty
     }
 }

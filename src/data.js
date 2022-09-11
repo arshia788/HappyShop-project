@@ -46,6 +46,7 @@ import tobacco from './images/perfumes/tomford-tobaccovanille.jpg';
 
 // VIKTOR&ROLF
 import spicebomb from './images/perfumes/spicebomb.webp';
+import spice from './images/perfumes/spice.jpeg';
 
 // creed 
 import creed from './images/perfumes/creed.jpg'
@@ -392,7 +393,7 @@ const data=[
     {
         id:25,
         brand:'VIKTOR&ROLF',
-        image:spicebomb,
+        image:spice,
         name:'Spicebomb Extreme',
         category:'perfume',
         price:3320000,
