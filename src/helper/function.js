@@ -36,12 +36,25 @@ const filterBoxPerfumes=(items)=>{
 // inja to omadi in items ro gerefti va gofti ke on item discunot bod bia true ro return bedeh
 // chon onvar mikhay shart bezari ke true shod price va disprice biad agar na faghat price biad 
 // chon hame ke discount ro nadaran.
-
 const findTag = (items)=>{
     if(items === 'discount'){
         return true
     }else{
         return false
+    }
+}
+
+const inAddItems=(state, data)=>{
+    const indexA = state.addItems.find((product)=> product.id === data.id)
+    return indexA
+}
+
+const qtyCheck=(state, data)=>{
+    const indexC = state.addItems.findIndex((product)=> product.id === data.id)
+    if(indexC){
+        return false
+    }else{
+        return state.addItems[indexC].qty
     }
 }
 
@@ -51,7 +64,9 @@ const findTag = (items)=>{
 
 
 
-export {headPhones, discountsFilter, 
+export {headPhones, discountsFilter,  qtyCheck,
     splitNumber, diorFilter, perfumeFilter, 
-    filterBoxPerfumes, findTag}
+    filterBoxPerfumes, findTag, inAddItems
+
+    }
 

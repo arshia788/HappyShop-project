@@ -33,7 +33,7 @@ const reducer=(state, action)=>{
         
         case "decrease":
             const indexB= state.addItems.findIndex((item)=> item.id === action.payload.id)
-            state.addItems[indexB].qty++;
+            state.addItems[indexB].qty--;
             return {...state}
 
         default:

@@ -1,9 +1,15 @@
 import React, {useContext} from 'react';
 import { makeStyles } from '@material-ui/core';
 
+
+// icon
+import PlusOneIcon from '@material-ui/icons/PlusOne';
+
 // function
 import { splitNumber } from '../helper/function';
 import { findTag } from '../helper/function';
+import { inAddItems } from '../helper/function';
+import { qtyCheck } from '../helper/function';
 
 // context
 import { ItemProvider } from '../context/ItemProductProvider';
@@ -140,9 +146,8 @@ const DetailProducts = (props) => {
     const {items} = useContext(ItemProvider)
     const product = items[id - 1]
     const {image, price, name, info, brand, priceDiscount, type} = product
-
-    // type ro dadi ta onja beri begi ke true hast on shart ya flase
     const yoyo= findTag(type)
+
 
     return (
         <div className={classes.container}>
@@ -163,6 +168,7 @@ const DetailProducts = (props) => {
                    {info}</p>
 
 
+
                     {
                         yoyo?
                         <div className={classes.pricies}>
@@ -173,9 +179,26 @@ const DetailProducts = (props) => {
                         <p className={classes.price}>{splitNumber(price)}</p>
                     }
 
+                    {qtyCheck(state, product) === 1 && <button onClick={()=> dispatch({type:'remove', payload:product})}>remove-item</button>}
 
-                    <button onClick={()=> dispatch({type:'add-item', payload:product})}
-                    className={classes.button}>add-item</button>
+                    {qtyCheck(state, product) > 1 && <button  onClick={()=> dispatch({type:'decrease', payload:product})}
+                    >-1</button>}
+
+
+                    {
+                        inAddItems(state, product)
+                        ?
+                        
+                            <button onClick={()=> dispatch({type:'increase', payload:product})}
+                            className={classes.button}>
+                                <PlusOneIcon />
+                            </button>
+                        :
+                        
+                            <button onClick={()=> dispatch({type:'add-item', payload:product})}
+                            className={classes.button}>add-item</button>
+
+                    }
 
                     
                 </div>
