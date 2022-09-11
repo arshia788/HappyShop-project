@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core';
 import BoxCardPerfumes from './shared/BoxCardPerfumes';
 
 // context
-import { ItemProvider } from '../context/ItemContextProvider';
+import { ItemProvider } from '../context/ItemProductProvider';
 
 // function
 import { filterBoxPerfumes } from '../helper/function';

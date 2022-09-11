@@ -13,7 +13,7 @@ import { headPhones } from '../helper/function';
 
 
 // context
-import { ItemProvider } from '../context/ItemContextProvider';
+import { ItemProvider } from '../context/ItemProductProvider';
 
 
 const useStyles=makeStyles((theme)=>({
@@ -134,8 +134,8 @@ const BoxScroll = () => {
                 
 
                 <div className={classes.control}>
-                    <Icon onClick={prevSlide}  icon={arrowCurveLeft} size={30} className={classes.icon}/>
-                    <Icon onClick={nextSlide} style={{marginLeft:'10px'}} className={classes.icon} 
+                    <Icon onClick={prevSlide} style={{cursor:'pointer'}}  icon={arrowCurveLeft} size={30} className={classes.icon}/>
+                    <Icon onClick={nextSlide} style={{marginLeft:'10px', cursor:'pointer'}} className={classes.icon} 
                     
                     icon={arrowCurveRight} size={30}/>
                 </div>

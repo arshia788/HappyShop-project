@@ -139,7 +139,7 @@ const DiscountCards = ({data}) => {
             </div>
 
             <div className={classes.btn}>  
-                <button className={classes.button}>add-cart</button>
+                <button className={classes.button}>details</button>
             </div>
 
         </div>

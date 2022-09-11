@@ -9,6 +9,7 @@ import PhonesLanding from './components/PhonesLanding';
 import Footer from './Footer';
 
 // context
+import ItemProductProvider from './context/ItemProductProvider';
 import ItemContextProvider from './context/ItemContextProvider';
 
 
@@ -19,7 +20,9 @@ const App = () => {
 
       <Navbar />
 
-      <ItemContextProvider>
+      <ItemProductProvider>
+        <ItemContextProvider>
+
         
         <Switch>
           <Route path='/happyshop/phones' component={PhonesLanding}/>
@@ -28,7 +31,8 @@ const App = () => {
           <Redirect to='/happyshop'/>
         </Switch>
         
-      </ItemContextProvider>
+        </ItemContextProvider>
+      </ItemProductProvider>
       <Footer />
       
 

@@ -9,6 +9,7 @@ import SliderPerfumes from './components/SliderPerfumes';
 import BoxPerfumes from './components/BoxPerfumes';
 
 const useStyles=makeStyles((theme)=>({
+    
     container:{
         marginTop:'100px',
         [theme.breakpoints.down('xs')]:{

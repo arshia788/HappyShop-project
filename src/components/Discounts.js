@@ -9,7 +9,7 @@ import { discountsFilter } from '../helper/function';
 
 
 // context
-import { ItemProvider } from '../context/ItemContextProvider';
+import { ItemProvider } from '../context/ItemProductProvider';
 
 const useStyles=makeStyles((theme)=>({
     container:{

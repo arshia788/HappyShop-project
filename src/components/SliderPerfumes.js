@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import { makeStyles } from '@material-ui/core';
 
 // context
-import { ItemProvider } from '../context/ItemContextProvider';
+import { ItemProvider } from '../context/ItemProductProvider';
 
 // owl
 import OwlCarousel from 'react-owl-carousel';
