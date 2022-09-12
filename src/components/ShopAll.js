@@ -4,6 +4,8 @@ import { Grid, makeStyles } from '@material-ui/core';
 // context
 import { ItemProvider } from '../context/ItemProductProvider';
 
+import { data } from '../data';
+
 
 // components
 import FilterShop from './FilterShop';
@@ -21,6 +23,7 @@ const useStyles=makeStyles((theme)=>({
 const ShopAll = () => {
 
     const {items, setItems} = useContext(ItemProvider)
+
     const classes= useStyles()
 
     const [sort, setSort]=useState('')
@@ -29,6 +32,7 @@ const ShopAll = () => {
 
 
     const sortItmes=(event)=>{
+
         setSort(event.target.value)
         console.log(sort)
 
@@ -46,24 +50,24 @@ const ShopAll = () => {
     }
 
     const sortByBrand=(event)=>{
-
+        
         setBrand(event.target.value)
-        if(event.target.value === ''){
-            setItems(items)
+        if(event.target.value === 'all'){
+            setItems(data)
         }
         else{
-            setItems(items.filter((product)=> product.brnad === event.target.value))
+            setItems(data.filter((product)=> product.brand === event.target.value))
         }
     }
 
     const sortByCategory = (event)=>{
-                
+
         setCategory(event.target.value)
-        if(event.target.value === ''){
-            setItems(items)
+        if(event.target.value === 'all'){
+            setItems(data)
         }
         else{
-            setItems(items.filter((product)=> product.brnad === event.target.value))
+            setItems(data.filter((product)=> product.category === event.target.value))
         }
     }
 

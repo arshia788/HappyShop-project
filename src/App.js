@@ -25,6 +25,7 @@ const App = () => {
 
         
         <Switch>
+          <Route path='/happyshop/shop/:id' component={DetailProducts}/>
           <Route path='/happyshop/shop' component={ShopAll}/>
           <Route path='/happyshop/:id' component={DetailProducts}/>
           <Route path='/happyshop' component={Landing}/>

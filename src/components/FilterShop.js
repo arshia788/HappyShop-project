@@ -126,7 +126,7 @@ const FilterShop = ({items, sortItmes,sortByBrand, brnad, sortByCategory, catego
 
                     <select value={brnad} onChange={sortByBrand}
                     className={classes.selectBrnad}>
-                        <option value=''>all</option>
+                        <option value='all'>all</option>
                         <option value='samsung'>samsung</option>
                         <option value="iphone">iphone</option>
                         <option value="LG">LG</option>
@@ -149,7 +149,7 @@ const FilterShop = ({items, sortItmes,sortByBrand, brnad, sortByCategory, catego
 
                     <select value={category} onChange={sortByCategory}
                     className={classes.selectBrnad}>
-                        <option value=''>all</option>
+                        <option value='all'>all</option>
                         <option value='mobile'>mobile</option>
                         <option value="headphone">headphone</option>
                         <option value="perfume">perfume</option>
