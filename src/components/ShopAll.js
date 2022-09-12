@@ -91,7 +91,7 @@ const ShopAll = () => {
 
                 <Grid xs={12} item>
                     <ShopCards 
-                    data={items}
+                        data={items}
                     />
                 </Grid>
 
