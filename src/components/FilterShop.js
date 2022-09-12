@@ -87,7 +87,7 @@ const useStyles=makeStyles((theme)=>({
 
 }))
 
-const FilterShop = ({items}) => {
+const FilterShop = ({items, sortItmes,sortByBrand, brnad, sortByCategory, category}) => {
 
     const classes = useStyles()
 
@@ -102,18 +102,18 @@ const FilterShop = ({items}) => {
 
                 <div className={classes.controllRadio}>
                     <div>
-                        <label>sort by new</label>
-                        <input type='radio'  name='radios' value='new'/>
+                        <label style={{marginRight:'5px'}}>sort by new</label>
+                        <input type='radio'  name='radios' value='new' onChange={sortItmes} />
                     </div>
 
                     <div className={classes.radioCenter} >
-                        <label>sort by old</label>
-                        <input type='radio'  name='radios' value='new'/>
+                        <label style={{marginRight:'5px'}}>sort by old</label>
+                        <input type='radio'  name='radios' value='old' onChange={sortItmes}/>
                     </div>
 
                     <div>
-                        <label>sort by price</label>
-                        <input type='radio'  name='radios' value='new'/>
+                        <label style={{marginRight:'5px'}}>sort by lowest price</label>
+                        <input type='radio'  name='radios' value='cheap' onChange={sortItmes}/>
                     </div>
 
                 </div>
@@ -123,7 +123,9 @@ const FilterShop = ({items}) => {
             <div className={classes.selectOption}>
 
                 <label className={classes.textBrand}>which brand ?</label>
-                    <select className={classes.selectBrnad}>
+
+                    <select value={brnad} onChange={sortByBrand}
+                    className={classes.selectBrnad}>
                         <option value=''>all</option>
                         <option value='samsung'>samsung</option>
                         <option value="iphone">iphone</option>
@@ -145,7 +147,8 @@ const FilterShop = ({items}) => {
                 
                 <label className={classes.textBrand}>which category ?</label>
 
-                    <select className={classes.selectBrnad}>
+                    <select value={category} onChange={sortByCategory}
+                    className={classes.selectBrnad}>
                         <option value=''>all</option>
                         <option value='mobile'>mobile</option>
                         <option value="headphone">headphone</option>

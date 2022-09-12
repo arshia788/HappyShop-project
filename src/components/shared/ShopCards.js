@@ -6,7 +6,7 @@ const useStyles=makeStyles((theme)=>({
 
 }))
 
-const ShopCards = () => {
+const ShopCards = ({data}) => {
     
     const classes = useStyles()
     
