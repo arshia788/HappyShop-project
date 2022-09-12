@@ -30,8 +30,8 @@ const useStyles=makeStyles((theme)=>({
         boxSizing:'border-box',
         padding:'15px',
         zIndex:'5',
-        borderEndStartRadius: (props)=> props.move ?'0' :'10px' ,
-        borderEndEndRadius:   (props)=> props.move ?'0' :'10px'  ,
+        // borderEndStartRadius: (props)=> props.move ?'0' :'10px' ,
+        // borderEndEndRadius:   (props)=> props.move ?'0' :'10px'  ,
         [theme.breakpoints.down('xs')]:{
             boxSizing:'border-box',
             padding:'13px'
@@ -60,6 +60,8 @@ const useStyles=makeStyles((theme)=>({
             borderTop:'1px solid #fff',
             borderEndEndRadius: '5px',
             borderEndStartRadius: '5px',
+            // borderTopRightRadius: '5px',
+
         }
     },
 
@@ -126,9 +128,8 @@ const Navbar = () => {
             </Typography>
 
             <ul className={classes.list}>
-                <li className={classes.li}> <Link to='/happyshop' style={{color:'#fff', textDecoration:'none'}}>home</Link>     </li>
-                <li className={classes.li}> <Link to='/happyshop/phones' style={{color:'#fff', textDecoration:'none'}}>phones</Link>   </li>
-                <li className={classes.li}> <Link to='/happyshop/perfumes' style={{color:'#fff', textDecoration:'none'}}>perfumes</Link> </li>
+                <li className={classes.li}> <Link to='/happyshop' style={{color:'#fff', textDecoration:'none'}}>home</Link>   </li>
+                <li className={classes.li}> <Link to='/happyshop/shop' style={{color:'#fff', textDecoration:'none'}}>shop</Link>   </li>
             </ul>
 
 

@@ -39,7 +39,7 @@ const useStyles=makeStyles((theme)=>({
     text:{
         borderBottom:'4px solid crimson',
         borderEndEndRadius:'10px',
-        width:'11%',
+        width:'13%',
         marginLeft:'20px',
         fontSize:'1.5rem',
         [theme.breakpoints.down('xs')]:{

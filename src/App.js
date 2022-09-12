@@ -5,7 +5,7 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import Navbar from './Navbar';
 import Landing from './Landing';
 import DetailProducts from './components/DetailProducts';
-import PhonesLanding from './components/PhonesLanding';
+import ShopAll from './components/ShopAll';
 import Footer from './Footer';
 
 // context
@@ -25,7 +25,7 @@ const App = () => {
 
         
         <Switch>
-          <Route path='/happyshop/phones' component={PhonesLanding}/>
+          <Route path='/happyshop/shop' component={ShopAll}/>
           <Route path='/happyshop/:id' component={DetailProducts}/>
           <Route path='/happyshop' component={Landing}/>
           <Redirect to='/happyshop'/>
