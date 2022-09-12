@@ -22,7 +22,7 @@ const useStyles=makeStyles((theme)=>({
 
 const ShopAll = () => {
 
-    const {items, setItems} = useContext(ItemProvider)
+    const { items, setItems} = useContext(ItemProvider)
 
     const classes= useStyles()
 
@@ -70,9 +70,6 @@ const ShopAll = () => {
             setItems(data.filter((product)=> product.category === event.target.value))
         }
     }
-
-
-
 
 
     return (

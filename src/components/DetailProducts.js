@@ -187,8 +187,12 @@ const DetailProducts = (props) => {
     const id = props.match.params.id;
     const {items} = useContext(ItemProvider);
     const product = items[id - 1];
+
+
     const {image, price, name, info, brand, priceDiscount,type} = product
     const handleItem= findTag(type)
+
+
     const final= itemQty(state, product)
     console.log(final)
 
@@ -225,6 +229,7 @@ const DetailProducts = (props) => {
                     <div className={classes.controllBtn} >
 
                         <div>
+                            
                             {qtyCheck(state, product) === 1 &&
                              <button className={classes.remove}
                              onClick={()=> dispatch({type:'remove', payload:product})}><DeleteForeverIcon /></button>}
@@ -233,9 +238,10 @@ const DetailProducts = (props) => {
                             {qtyCheck(state, product) > 1 && <button className={classes.minus}
                              onClick={()=> dispatch({type:'decrease', payload:product})}>
                             <ExposureNeg1Icon/></button>}
+
                         </div>
                         
-                        <p className={classes.qty} >{final}</p>
+                        <p className={classes.qty}>{final}</p>
                         
                         
                         <div>

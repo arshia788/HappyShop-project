@@ -1,4 +1,5 @@
-import { data } from "../data"
+import { data } from "../data";
+
 
 const headPhones=(items)=>{
     const filterHeadphones= items.filter((product)=> product.category === "headphone")
@@ -49,10 +50,11 @@ const inAddItems=(state, data)=>{
     return indexA
 }
 
+
 const qtyCheck=(state, data)=>{
     const indexC = state.addItems.findIndex((product)=> product.id === data.id)
     
-    if(indexC){
+    if(indexC === -1){
         return false
     }else{
         return state.addItems[indexC].qty
@@ -62,7 +64,8 @@ const qtyCheck=(state, data)=>{
 
 const itemQty=(state, data)=>{
     const getItem = state.addItems.findIndex((product)=> product.id === data.id)
-    if(getItem){
+
+    if(getItem === -1){
         return false
     }
     else{

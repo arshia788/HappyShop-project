@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {makeStyles, Typography} from '@material-ui/core';
 
@@ -8,9 +8,9 @@ import { home } from 'react-icons-kit/icomoon/home';
 import {cross} from 'react-icons-kit/entypo/cross';
 import {shoppingBasket} from 'react-icons-kit/fa/shoppingBasket'
 
-import {instagram} from 'react-icons-kit/fa/instagram';
-import {facebookSquare} from 'react-icons-kit/fa/facebookSquare'
-import {twitterSquare} from 'react-icons-kit/fa/twitterSquare';
+
+import { ContextProvider } from './context/ItemContextProvider';
+
 
 
 const useStyles=makeStyles((theme)=>({
@@ -30,8 +30,8 @@ const useStyles=makeStyles((theme)=>({
         boxSizing:'border-box',
         padding:'15px',
         zIndex:'5',
-        // borderEndStartRadius: (props)=> props.move ?'0' :'10px' ,
-        // borderEndEndRadius:   (props)=> props.move ?'0' :'10px'  ,
+        borderEndStartRadius: (props)=> props.move ?'0' :'10px' ,
+        borderEndEndRadius:   (props)=> props.move ?'0' :'10px'  ,
         [theme.breakpoints.down('xs')]:{
             boxSizing:'border-box',
             padding:'13px'
@@ -88,7 +88,26 @@ const useStyles=makeStyles((theme)=>({
         }
         ,
         cursor:'pointer',
+        position:'relative',
     },
+
+    itemCounter:{
+        textDecoration:'none !important',
+        color:'#fff',
+    },
+
+    numbersInBasket:{
+        position:'absolute',
+        top:'20px',
+        left:'30px',
+        background:"navy",
+        borderRadius:'50%',
+        width:'20px',
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center'
+    }
+    ,
 
     btn:{
         border:'none',
@@ -102,6 +121,8 @@ const useStyles=makeStyles((theme)=>({
 
 
 const Navbar = () => {
+
+    const {state}= useContext(ContextProvider)
 
     const [move, setMove]=useState(false)
     const [list, setList]= useState(false)
@@ -134,9 +155,12 @@ const Navbar = () => {
 
 
             <div className={classes.social}>
-                <Link to='/happyshop/purchases'>
+
+                <Link to='/happyshop/purchases' className={classes.itemCounter} >
                     <Icon icon={shoppingBasket} size={27} style={{color:"#fff"}}/>
+                    <span className={classes.numbersInBasket}>{state.itemsCounter}</span>
                 </Link>
+
             </div>
 
             <button className={classes.btn} onClick={()=> setList(!list)}>

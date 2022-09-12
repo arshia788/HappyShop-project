@@ -18,10 +18,11 @@ const App = () => {
   return (
     <div>
 
-      <Navbar />
-
       <ItemProductProvider>
         <ItemContextProvider>
+
+          <Navbar />
+
 
         
         <Switch>
