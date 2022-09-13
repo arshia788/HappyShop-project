@@ -246,7 +246,7 @@ const DetailProducts = (props) => {
                             className={classes.imgReplace} key={index} src={item.image}/>)
                         }
 
-                        <img src={image} onClick={()=> setHolderImg(image)}style={{width:"100px", borderRadius:'5px'}} />
+                        <img src={image} onClick={()=> setHolderImg(image)}style={{width:"100px", borderRadius:'5px', cursor:'pointer'}} />
 
 
                     </div>

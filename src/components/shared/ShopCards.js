@@ -26,7 +26,7 @@ const useStyles=makeStyles((theme)=>({
         borderRadius:'5px',
         overflow:'hidden',
         margin:'20px 10px',
-        padding:"0 0 20px 0",
+        padding:"0 0 30px 0",
         transition:'all .3s ease',
         [theme.breakpoints.down('xs')]:{
             width:'45%',
@@ -77,6 +77,8 @@ const ShopCards = ({data}) => {
                                 <img className={classes.img} src={item.image}/>
 
                                 <p className={classes.text}>{item.name}</p>
+
+                                {/* <p class>{item.price}</p> */}
 
                                 <div className={classes.linkHolder}>
                                     <Link className={classes.link}

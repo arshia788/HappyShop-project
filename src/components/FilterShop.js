@@ -136,14 +136,14 @@ const FilterShop = ({items, sortItmes,sortByBrand, brnad, sortByCategory, catego
                         <option value="chanel">chanel</option>
                         <option value="dior">dior</option>
                         <option value="tomford">tomford</option>
-                        <option value="VIKTOR&ROLF">VIKTOR&ROLF</option>
+                        <option value="lalique">lalique</option>
                         <option value="Montblanc">Montblanc</option>
                         <option value="creed">creed</option>
                     </select>
             </div>
 
 
-            <div className={classes.selectOption}>
+            {/* <div className={classes.selectOption}>
                 
                 <label className={classes.textBrand}>which category ?</label>
 
@@ -154,7 +154,7 @@ const FilterShop = ({items, sortItmes,sortByBrand, brnad, sortByCategory, catego
                         <option value="headphone">headphone</option>
                         <option value="perfume">perfume</option>
                     </select>
-            </div>
+            </div> */}
 
         </div>
     );
