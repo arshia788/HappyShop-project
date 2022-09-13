@@ -44,15 +44,15 @@ import fucking from './images/perfumes/fucking-fabulous-1.jpg';
 import oudwood from './images/perfumes/oud-wood.webp';
 import tobacco from './images/perfumes/tomford-tobaccovanille.jpg';
 
-// VIKTOR&ROLF
-import spicebomb from './images/perfumes/spicebomb.webp';
-import spice from './images/perfumes/spice.jpeg';
 
 // creed 
 import creed from './images/perfumes/creed.jpg'
 
 // montblanc
 import montblanc from './images/perfumes/montblanc.jpg'
+
+// lalique
+import lalique from './images/perfumes/lalique.jpg'
 
 
 const data=[
@@ -388,13 +388,13 @@ const data=[
     }
     ,
 
-    // VIKTOR&ROLF
+    // lalique
 
     {
         id:25,
-        brand:'VIKTOR&ROLF',
-        image:spice,
-        name:'Spicebomb Extreme',
+        brand:'lalique',
+        image:lalique,
+        name:'lalique encre noire',
         category:'perfume',
         price:3320000,
         type:'normal',

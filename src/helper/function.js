@@ -73,6 +73,13 @@ const itemQty=(state, data)=>{
     }
 }
 
+const findThrePic= (items, data)=>{
+    const findpic= items.filter((product)=> product.category === data.category)
+    const [a, b]=findpic
+    const list= [a, b];
+    return list
+}
+
 
 
 
@@ -81,7 +88,7 @@ const itemQty=(state, data)=>{
 
 export {headPhones, discountsFilter,  qtyCheck, itemQty,
     splitNumber, diorFilter, perfumeFilter, 
-    filterBoxPerfumes, findTag, inAddItems
+    filterBoxPerfumes, findTag, inAddItems, findThrePic
 
-    }
+}
 

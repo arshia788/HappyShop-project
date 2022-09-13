@@ -1,5 +1,9 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import { makeStyles } from '@material-ui/core';
+
+
+import lgv50 from '../images/LGV50.jpg';
+import creed from '../images/perfumes/creed.jpg'
 
 
 // icon
@@ -13,6 +17,7 @@ import { findTag } from '../helper/function';
 import { inAddItems } from '../helper/function';
 import { qtyCheck } from '../helper/function';
 import { itemQty } from '../helper/function';
+import { findThrePic } from '../helper/function';
 
 // context
 import { ItemProvider } from '../context/ItemProductProvider';
@@ -33,12 +38,18 @@ const useStyles=makeStyles((theme)=>({
         overflow:'hidden',
         background:'#fff',
         boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
-        padding:'23px',
+        padding:'23px 23px 160px 23px',
         display:'flex',
         justifyContent:'space-between',
+        
         [theme.breakpoints.down('xs')]:{
-            flexDirection:'column'
-        }
+            flexDirection:'column',
+            padding:'23px 23px 50px 23px',
+        },
+        
+        [theme.breakpoints.down('md')]:{
+            padding:'23px 23px 80px 23px',
+        },
         
     },
 
@@ -52,6 +63,7 @@ const useStyles=makeStyles((theme)=>({
             display:'flex',
             justifyContent:'center',
             alignItems:'center',
+            flexDirection:'column',
         },
 
         [theme.breakpoints.down('md')]:{
@@ -60,6 +72,7 @@ const useStyles=makeStyles((theme)=>({
             display:'flex',
             justifyContent:'center',
             alignItems:'center',
+            flexDirection:'column',
         },
     },
     
@@ -69,6 +82,23 @@ const useStyles=makeStyles((theme)=>({
         height:'100%',
         objectFit:'cover',
     },
+
+    holderReplaceImg:{
+        display:'flex',
+        justifyContent:'space-between',
+        alignItems:'center',
+        marginTop:'10px'
+    },
+
+    imgReplace:{
+        width:'100px !important',
+        margin:'0 5px',
+        borderRadius:'5px',
+        height:'100px !important',
+        cursor:'pointer',
+    },
+
+
 
     name:{
         marginBottom:theme.spacing(5),
@@ -179,6 +209,8 @@ const useStyles=makeStyles((theme)=>({
     },
 
 }))
+
+
 const DetailProducts = (props) => {
 
     const classes= useStyles()
@@ -187,14 +219,14 @@ const DetailProducts = (props) => {
     const id = props.match.params.id;
     const {items} = useContext(ItemProvider);
     const product = items[id - 1];
-
-
-    const {image, price, name, info, brand, priceDiscount,type} = product
+    const {image, price, name, info, brand, priceDiscount,type, category} = product
+    const [holderImg, setHolderImg]=useState(image)
     const handleItem= findTag(type)
+    const numberOfQty= itemQty(state, product)
 
-
-    const final= itemQty(state, product)
-    console.log(final)
+    
+    const three = findThrePic(items, product)
+    console.log(three)
 
 
 
@@ -205,16 +237,34 @@ const DetailProducts = (props) => {
 
                 <div className={classes.imgHolder}>
                     <img className={classes.img}
-                    src={image} alt={name}/>
+                    src={holderImg} alt={name}/>
+
+                    <div className={classes.holderReplaceImg}>
+
+                        {
+                            three.map((item, index)=> <img onClick={()=>setHolderImg(item.image)}
+                            className={classes.imgReplace} key={index} src={item.image}/>)
+                        }
+
+                        <img src={image} onClick={()=> setHolderImg(image)}style={{width:"100px", borderRadius:'5px'}} />
+
+
+                    </div>
                 </div>
 
                 <div className={classes.info}>
 
                    <p className={classes.name}>{name}</p>
+                    
+                    
+
+
+
                    <p className={classes.brand}><span style={{color:'crimson', fontWeight:'600', fontSize:'1.2rem'}}>brand:</span> {brand}</p>
                    <p className={classes.infoProduct}> 
                    <span style={{color:'crimson', fontSize:'1.2rem', fontWeight:'600'}}>info: </span>
                    {info}</p>
+
 
                     {
                         handleItem?
@@ -241,7 +291,7 @@ const DetailProducts = (props) => {
 
                         </div>
                         
-                        <p className={classes.qty}>{final}</p>
+                        <p className={classes.qty}>{numberOfQty}</p>
                         
                         
                         <div>
