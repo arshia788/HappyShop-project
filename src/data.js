@@ -389,7 +389,6 @@ const data=[
     ,
 
     // lalique
-
     {
         id:25,
         brand:'lalique',
