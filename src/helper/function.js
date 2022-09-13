@@ -30,7 +30,7 @@ const perfumeFilter=(items)=>{
 
 const filterBoxPerfumes=(items)=>{
     const box = items.filter((product)=> product.name ==='tomford oudwood' || 
-    product.name === 'Spicebomb Extreme' || product.name === 'Creed-aventus'||product.name === 'Mont Blanc Legend'  )
+    product.name === 'lalique encre noire' || product.name === 'Creed-aventus'||product.name === 'Mont Blanc Legend'  )
     return box
 }
 
@@ -46,7 +46,7 @@ const findTag = (items)=>{
 }
 
 const inAddItems=(state, data)=>{
-    const indexA = state.addItems.find((product)=> product.id === data.id)
+    const indexA = !!state.addItems.find((product)=> product.id === data.id)
     return indexA
 }
 

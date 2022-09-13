@@ -222,11 +222,11 @@ const DetailProducts = (props) => {
     const {image, price, name, info, brand, priceDiscount,type, category} = product
     const [holderImg, setHolderImg]=useState(image)
     const handleItem= findTag(type)
+    
     const numberOfQty= itemQty(state, product)
+    const twoImg = findThrePic(items, product)
 
     
-    const three = findThrePic(items, product)
-    console.log(three)
 
 
 
@@ -242,7 +242,7 @@ const DetailProducts = (props) => {
                     <div className={classes.holderReplaceImg}>
 
                         {
-                            three.map((item, index)=> <img onClick={()=>setHolderImg(item.image)}
+                            twoImg.map((item, index)=> <img onClick={()=>setHolderImg(item.image)}
                             className={classes.imgReplace} key={index} src={item.image}/>)
                         }
 

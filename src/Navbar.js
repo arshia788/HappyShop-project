@@ -158,7 +158,7 @@ const Navbar = () => {
 
                 <Link to='/happyshop/purchases' className={classes.itemCounter} >
                     <Icon icon={shoppingBasket} size={27} style={{color:"#fff"}}/>
-                    <span className={classes.numbersInBasket}>{state.itemsCounter}</span>
+                    <span>{state.itemsCounter}</span>
                 </Link>
 
             </div>

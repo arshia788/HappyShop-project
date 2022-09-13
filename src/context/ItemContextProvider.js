@@ -2,13 +2,13 @@ import React, {createContext, useReducer} from 'react';
 
 const initialState={
     addItems:[],
-    totalItems:0,
+    itemsCounter:0,
 }
 
-const sumItems=items=>{
-    const itemsCounter= items.reduce((total, product)=> total + product.qty, 0)
-
-    return{itemsCounter}
+const sumItems = items=>{
+    const itemsCounter = items.reduce((total, product)=> total + product.qty, 0 );
+    const total= items.reduce((total, product)=> total + product.qty* product.price, 0);
+    return {itemsCounter, total}
 }
 
 
@@ -33,20 +33,20 @@ const reducer=(state, action)=>{
         case "remove":
             const filterd = state.addItems.filter((item)=> item.id !== action.payload.id)
             return{
-                ...state, addItems:[...filterd],
-                ...sumItems(state.addItems)
+                ...state, 
+                addItems:[...filterd], ...sumItems(filterd)
             }
         
         case "increase":
             const indexI= state.addItems.findIndex((item)=> item.id === action.payload.id)
             state.addItems[indexI].qty++;
-            return {...state , ...sumItems(state.addItems)}
+            return {...state ,  ...sumItems(state.addItems)}
         
         
         case "decrease":
-            const indexB= state.addItems.findIndex((item)=> item.id === action.payload.id)
+            const indexB = state.addItems.findIndex((item)=> item.id === action.payload.id)
             state.addItems[indexB].qty--;
-            return {...state, ...sumItems(state.addItems)}
+            return {...state, ...sumItems(state.addItems) }
 
         default:
             return state

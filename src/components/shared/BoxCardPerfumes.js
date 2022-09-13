@@ -13,6 +13,14 @@ const useStyles=makeStyles((theme)=>({
         [theme.breakpoints.down('xs')]:{
             width:'100%'
         },
+
+        [theme.breakpoints.down('md')]:{
+            width:'45%'
+        },
+
+        [theme.breakpoints.down('sm')]:{
+            width:'100%'
+        },
     },
 
     img:{
