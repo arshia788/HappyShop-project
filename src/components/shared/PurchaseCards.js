@@ -6,7 +6,7 @@ import {makeStyles} from '@material-ui/core';
 import CancelIcon from '@material-ui/icons/Cancel';
 
 // function
-import { itemQty } from '../../helper/function';
+import { purchaseQtyCards } from '../../helper/function';
 
 // context
 import { ContextProvider } from '../../context/ItemContextProvider';
@@ -48,6 +48,10 @@ const useStyles=makeStyles((theme)=>({
         marginBottom:theme.spacing(3)
     },
 
+    info:{
+        marginBottom:'20px'
+    },
+
     itemInBasket:{
         marginTop:'20px',
         fontSize:'1.2rem'
@@ -62,6 +66,30 @@ const useStyles=makeStyles((theme)=>({
         color:'#fff',
         borderRadius:'5px',
         fontSize:'1.1rem',
+    },
+
+    price:{
+        display:'flex',
+        margin:'20px 0px',
+        alignItems:'center',
+
+    },
+
+    priceItem:{
+        background:'crimson',
+        color:'#fff',
+        padding:'3px 7px',
+        borderRadius:'5px',
+        marginRight:'13px',
+        fontSize:'1.1rem'
+    },
+    
+    samePrice:{
+        background:'navy',
+        color:'#fff',
+        padding:'3px 7px',
+        width:'fit-content',
+        borderRadius:'5px',
     }
 }))
 
@@ -86,6 +114,19 @@ const PurchaseCards = ({data}) => {
                 <p className={classes.name}>{data.name}</p>
                 <p className={classes.info}> 
                 <span style={{color:'crimson', fontSize:'1.1rem'}}>info:</span> {data.info}</p>
+
+                {
+                    purchaseQtyCards(data.type)
+                    ?
+                    <div className={classes.price}>
+                        <p className={classes.priceItem}> <s>{data.price}</s> </p>
+                        <p className={classes.samePrice}>{data.priceDiscount}</p>
+                    </div>
+
+                    :
+                    <p className={classes.samePrice}>{data.price}</p>
+                }
+
                 <p className={classes.itemInBasket}>your items in basket <span className={classes.qty}>{data.qty}</span> </p>
             </div>
                 

@@ -248,7 +248,7 @@ const DetailProducts = (props) => {
                         }
 
                         <img src={image} onClick={()=> setHolderImg(image)}style={{width:"100px", borderRadius:'5px', cursor:'pointer'}} />
-
+                        
 
                     </div>
                 </div>

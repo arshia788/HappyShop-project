@@ -80,15 +80,23 @@ const findThrePic= (items, data)=>{
     return list
 }
 
+const purchaseQtyCards=(data)=>{
+    if(data === 'discount'){
+        return true
+    }
+    else{
+        return false
+    }
+}
 
 
 
 
 
-
-export {headPhones, discountsFilter,  qtyCheck, itemQty,
+export { headPhones, discountsFilter,  qtyCheck, itemQty,
     splitNumber, diorFilter, perfumeFilter, 
-    filterBoxPerfumes, findTag, inAddItems, findThrePic
+    filterBoxPerfumes, findTag, inAddItems, findThrePic,
+    purchaseQtyCards, 
 
 }
 
