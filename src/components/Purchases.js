@@ -16,7 +16,7 @@ const useStyles=makeStyles((theme)=>({
 
     leftComponent:{
         marginTop:'150px',
-        border:'1px solid black'
+        padding:'10px'
     }
 
 

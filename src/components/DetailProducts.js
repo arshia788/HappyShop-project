@@ -220,6 +220,7 @@ const DetailProducts = (props) => {
     const {items} = useContext(ItemProvider);
     const product = items[id - 1];
     const {image, price, name, info, brand, priceDiscount,type, category} = product
+
     const [holderImg, setHolderImg]=useState(image)
     const handleItem= findTag(type)
     
