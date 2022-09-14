@@ -20,7 +20,10 @@ const useStyles=makeStyles((theme)=>({
         boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
         padding:"40px 13px",
         position:'relative',
-        marginTop:theme.spacing(2.5)
+        marginTop:theme.spacing(2.5),
+        [theme.breakpoints.down('xs')]:{
+            flexDirection:'column',
+        }
     },
 
     icon:{
@@ -34,6 +37,11 @@ const useStyles=makeStyles((theme)=>({
     imgHolder:{
         width:'50%',
         marginRight:theme.spacing(1.3),
+        [theme.breakpoints.down('xs')]:{
+            width:'100%',
+            marginBottom:'13px',
+            marginTop:'13px'
+        }
     },
 
     img:{
@@ -45,7 +53,10 @@ const useStyles=makeStyles((theme)=>({
     name:{
         fontSize:'1.2rem',
         fontWeight:'600',
-        marginBottom:theme.spacing(3)
+        marginBottom:theme.spacing(3),
+        [theme.breakpoints.down('xs')]:{
+            textAlign:'center',
+        }
     },
 
     info:{
@@ -54,7 +65,11 @@ const useStyles=makeStyles((theme)=>({
 
     itemInBasket:{
         marginTop:'20px',
-        fontSize:'1.2rem'
+        fontSize:'1.2rem',
+        [theme.breakpoints.down('xs')]:{
+            textAlign:'center',
+            marginTop:'30px',
+        }
 
     }
     ,

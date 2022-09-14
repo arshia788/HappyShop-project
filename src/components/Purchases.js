@@ -41,13 +41,13 @@ const Purchases = () => {
         <div className={classes.container}>
             <Grid container>
 
-                <Grid item sm={8} className={classes.leftComponent}>
+                <Grid item xs={12} sm={8} className={classes.leftComponent}>
                     {
                         state.addItems.map((item)=> <PurchaseCards key={item.id} data={item}/>)
                     }
                 </Grid>
 
-                <Grid item sm={4} className={classes.rightComponent}>
+                <Grid item xs={12} sm={4} className={classes.rightComponent}>
                     <RightPurchase />
                 </Grid>
 

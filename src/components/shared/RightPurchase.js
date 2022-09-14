@@ -11,7 +11,11 @@ const useStyles=makeStyles((theme)=>({
         boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
         borderRadius:'5px',
         padding:'25px 20px',
-        width:'70%'
+        [theme.breakpoints.down('xs')]:{
+            width:'90%',
+            margin:'10px auto',
+        }
+        
     },
 
     btnLeft:{
@@ -20,16 +24,18 @@ const useStyles=makeStyles((theme)=>({
         color:'#fff',
         padding:'3px 7px',
         borderRadius:'5px',
-        fontSize:'1.1rem'
+        fontSize:'1.1rem',
+        cursor:'pointer'
     },
-
+    
     btnRight:{
         border:'none',
         background:'navy',
         color:'#fff',
         padding:'3px 7px',
         borderRadius:'5px',
-        fontSize:'1.1rem'
+        fontSize:'1.1rem',
+        cursor:'pointer',
     },
 
 
