@@ -31,7 +31,7 @@ const useStyles=makeStyles((theme)=>({
         padding:"0 0 70px 0",
         transition:'all .3s ease',
         [theme.breakpoints.down('xs')]:{
-            width:'45%',
+            width:'100%',
             margin:'10px'
         }
     },
@@ -109,12 +109,11 @@ const ShopCards = ({data}) => {
                         <Fade bottom  key={index}>
                             <div key={index} className={classes.box}>
                                 <img className={classes.img} src={item.image}/>
-
+                                
                                 <p className={classes.text}>{item.name}</p>
 
                                 {
                                     findTag(item.type) ?
-
                                     <div className={classes.twoPrice}>
                                         <p className={classes.disPrice}> <s>{item.price}</s> </p>
                                         <p className={classes.mainPrice}>{item.priceDiscount}</p>
