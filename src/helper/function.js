@@ -93,6 +93,8 @@ const purchaseQtyCards=(data)=>{
 
 
 
+
+
 export { headPhones, discountsFilter,  qtyCheck, itemQty,
     splitNumber, diorFilter, perfumeFilter, 
     filterBoxPerfumes, findTag, inAddItems, findThrePic,

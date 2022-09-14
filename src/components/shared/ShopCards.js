@@ -4,6 +4,8 @@ import { makeStyles } from '@material-ui/core';
 
 import Fade from 'react-reveal/Fade'; 
 
+import { findTag } from '../../helper/function';
+
 const useStyles=makeStyles((theme)=>({
     
     container:{
@@ -26,7 +28,7 @@ const useStyles=makeStyles((theme)=>({
         borderRadius:'5px',
         overflow:'hidden',
         margin:'20px 10px',
-        padding:"0 0 30px 0",
+        padding:"0 0 70px 0",
         transition:'all .3s ease',
         [theme.breakpoints.down('xs')]:{
             width:'45%',
@@ -38,6 +40,38 @@ const useStyles=makeStyles((theme)=>({
         width:'100%',
         height:'200px',
         objectFit:'cover',
+    },
+
+    twoPrice:{
+        display:'flex',
+        justifyContent:'space-between',
+        marginLeft:'10px',
+        padding:'10px 5px'
+    },
+
+    disPrice:{
+        background:'crimson',
+        color:'#fff',
+        padding:'3px 7px',
+        borderRadius:'5px',
+    },
+
+    mainPrice:{
+        color:'#fff',
+        padding:'3px 7px',
+        borderRadius:'5px',
+        background:'navy',
+        width:"fit-content"
+    },
+
+    mainPrice2:{
+        color:'#fff',
+        padding:'3px 7px',
+        borderRadius:'5px',
+        background:'navy',
+        width:"fit-content",
+        marginLeft:'10px',
+        marginTop:'10px',
     },
 
     linkHolder:{
@@ -78,7 +112,17 @@ const ShopCards = ({data}) => {
 
                                 <p className={classes.text}>{item.name}</p>
 
-                                {/* <p class>{item.price}</p> */}
+                                {
+                                    findTag(item.type) ?
+
+                                    <div className={classes.twoPrice}>
+                                        <p className={classes.disPrice}> <s>{item.price}</s> </p>
+                                        <p className={classes.mainPrice}>{item.priceDiscount}</p>
+
+                                    </div>
+                                    :
+                                    <p className={classes.mainPrice2}>{item.price}</p>
+                                }
 
                                 <div className={classes.linkHolder}>
                                     <Link className={classes.link}
