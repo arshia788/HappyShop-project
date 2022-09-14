@@ -6,6 +6,15 @@ import { makeStyles } from '@material-ui/core';
 import { ContextProvider } from '../../context/ItemContextProvider';
 
 const useStyles=makeStyles((theme)=>({
+
+    container:{
+        [theme.breakpoints.down('xs')]:{
+            width:'90%',
+            margin:'auto',
+            padding:'3px',
+        }
+    }
+    ,
     box:{
         background:'#fff',
         boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
@@ -38,6 +47,18 @@ const useStyles=makeStyles((theme)=>({
         cursor:'pointer',
     },
 
+    link:{
+        textDecoration:'none',
+        color:'#fff',
+        padding:'3px 7px',
+        borderRadius:'5px',
+        background:'navy',
+        // [theme.breakpoints.down('xs')]:{
+        //     margin:'15px 0'
+        // },
+
+    }
+
 
 }))
 
@@ -48,7 +69,7 @@ const RightPurchase = () => {
     const {state, dispatch}= useContext(ContextProvider)
 
     return (
-        <div >
+        <div className={classes.container}>
                     {
                         state.itemsCounter > 0 &&<div className={classes.box}>
                             <p style={{marginBottom:'10px'}}><span style={{color:'seagreen', fontSize:'1.1rem'}}>total items:</span> {state.itemsCounter}</p>
@@ -65,15 +86,15 @@ const RightPurchase = () => {
                     {
                         state.checkout && <div>
                             <h3>checked out successfuly</h3>
-                            <Link to='/happyshop'>back home</Link>
+                            <Link className={classes.link} to='/happyshop'>back home</Link>
                         </div>
                     }
 
 
                     {
                         !state.checkout && state.itemsCounter === 0 && <div>
-                            <h3>want to but?</h3>
-                            <Link to='/happyshop/shop'></Link>
+                            <h3>want to buy more?</h3>
+                            <Link className={classes.link} to='/happyshop/shop'>go shop</Link>
                         </div>
                     }
         </div>
