@@ -22,7 +22,8 @@ import samsungsZFlip from './images/samsungZFlip.jpg';
 import LGvelvet5 from './images/LGvelvet5.jpg';
 import LGVelvetpro from './images/LGVelvetpro.jpg';
 import LGV50 from './images/LGV50.jpg';
-import LGV60 from './images/LGV60.jpg';
+import LGWing from './images/lgwing.webp';
+import LGK92 from './images/lgk92.webp';
 
 
 // xiaomi
@@ -241,11 +242,12 @@ const data=[
     {
         id:14,
         brand:'LG',
-        image:LGV50,
-        name:'LG V50',
+        image:LGWing,
+        name:'LGWing',
         category:'mobile',
         price:4100000,
-        type:'normal',
+        type:'discount',
+        priceDiscount:3800000,
         
         info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae.",
     }
@@ -254,8 +256,8 @@ const data=[
     {
         id:15,
         brand:'LG',
-        image:LGV60,
-        name:'LG V60',
+        image:LGK92,
+        name:'LGK92',
         category:'mobile',
         price:4100000,
         type:'discount',

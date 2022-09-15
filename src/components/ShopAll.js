@@ -10,6 +10,7 @@ import { data } from '../data';
 // components
 import FilterShop from './FilterShop';
 import ShopCards from './shared/ShopCards';
+import ScrollTop from './ScrollTop';
 
 const useStyles=makeStyles((theme)=>({
 
@@ -94,6 +95,10 @@ const ShopAll = () => {
                     <ShopCards 
                         data={items}
                     />
+                </Grid>
+
+                <Grid item xs={1}>
+                    <ScrollTop />
                 </Grid>
 
             </Grid>

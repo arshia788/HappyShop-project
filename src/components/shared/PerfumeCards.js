@@ -20,6 +20,7 @@ const useStyles=makeStyles((theme)=>({
         color:'#fff',
         margin:'20px 0',
         padding:'0 0 20px 0',
+        maxHeight:'285px',
         [theme.breakpoints.down('xs')]:{
             width:'80%',
             marginLeft:'33px',

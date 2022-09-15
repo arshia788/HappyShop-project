@@ -34,7 +34,7 @@ const useStyles=makeStyles((theme)=>({
         borderEndEndRadius:   (props)=> props.move ?'0' :'10px'  ,
         [theme.breakpoints.down('xs')]:{
             boxSizing:'border-box',
-            padding:'13px'
+            padding:'13px 13px 15px 13px'
         }
 
     },
@@ -52,7 +52,7 @@ const useStyles=makeStyles((theme)=>({
         cursor:"pointer",
         [theme.breakpoints.down('xs')]:{
             position:'absolute',
-            top:'60px',
+            top:'63px',
             background:'crimson',
             display:"block",
             left:(props)=> props.list ? '0':'-100%',
@@ -60,8 +60,6 @@ const useStyles=makeStyles((theme)=>({
             borderTop:'1px solid #fff',
             borderEndEndRadius: '5px',
             borderEndStartRadius: '5px',
-            // borderTopRightRadius: '5px',
-
         }
     },
 

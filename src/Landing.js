@@ -7,6 +7,7 @@ import Discounts from './components/Discounts';
 import DiorPerfume from './components/DiorPerfume';
 import SliderPerfumes from './components/SliderPerfumes';
 import BoxPerfumes from './components/BoxPerfumes';
+import ScrollTop from './components/ScrollTop';
 
 const useStyles=makeStyles((theme)=>({
     
@@ -45,6 +46,10 @@ const Landing = () => {
 
                 <Grid item xs={12}>
                     <BoxPerfumes />
+                </Grid>
+
+                <Grid item xs={1}>
+                    <ScrollTop />
                 </Grid>
 
 
