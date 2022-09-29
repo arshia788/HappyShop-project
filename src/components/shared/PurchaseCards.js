@@ -6,7 +6,7 @@ import {makeStyles} from '@material-ui/core';
 import CancelIcon from '@material-ui/icons/Cancel';
 
 // function
-import { purchaseQtyCards } from '../../helper/function';
+import { purchaseQtyCards, splitNumber } from '../../helper/function';
 
 // context
 import { ContextProvider } from '../../context/ItemContextProvider';
@@ -135,12 +135,12 @@ const PurchaseCards = ({data}) => {
                     purchaseQtyCards(data.type)
                     ?
                     <div className={classes.price}>
-                        <p className={classes.priceItem}> <s>{data.price}</s> </p>
-                        <p className={classes.samePrice}>{data.priceDiscount}</p>
+                        <p className={classes.priceItem}> <s>{splitNumber(data.price)}</s> </p>
+                        <p className={classes.samePrice}>{splitNumber(data.priceDiscount)}</p>
                     </div>
 
                     :
-                    <p className={classes.samePrice}>{data.price}</p>
+                    <p className={classes.samePrice}>{splitNumber(data.price)}</p>
                 }
 
                 <p className={classes.itemInBasket}>your items in basket <span className={classes.qty}>{data.qty}</span> </p>
