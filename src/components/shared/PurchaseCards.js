@@ -32,6 +32,7 @@ const useStyles=makeStyles((theme)=>({
         top:'10px',
         fontSize:'2rem',
         color:'crimson',
+        cursor:"pointer",
     },
 
     imgHolder:{

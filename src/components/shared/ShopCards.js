@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core';
 
 import Fade from 'react-reveal/Fade'; 
 
-import { findTag } from '../../helper/function';
+import { findTag, splitNumber } from '../../helper/function';
 
 const useStyles=makeStyles((theme)=>({
     
@@ -115,12 +115,12 @@ const ShopCards = ({data}) => {
                                 {
                                     findTag(item.type) ?
                                     <div className={classes.twoPrice}>
-                                        <p className={classes.disPrice}> <s>{item.price}</s> </p>
-                                        <p className={classes.mainPrice}>{item.priceDiscount}</p>
+                                        <p className={classes.disPrice}> <s>{splitNumber(item.price)}</s> </p>
+                                        <p className={classes.mainPrice}>{splitNumber(item.priceDiscount)}</p>
 
                                     </div>
                                     :
-                                    <p className={classes.mainPrice2}>{item.price}</p>
+                                    <p className={classes.mainPrice2}>{splitNumber(item.price)}</p>
                                 }
 
                                 <div className={classes.linkHolder}>

@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core';
 import DiscountCards from './shared/DiscountCards';
 
 // function
-import { discountsFilter } from '../helper/function';
+import { discountsFilter, itemsDiscountFilter } from '../helper/function';
 
 
 // context
@@ -61,6 +61,9 @@ const Discounts = () => {
     const {items} = useContext(ItemProvider)
 
     const discount= discountsFilter(items)
+    
+    const discountItems=itemsDiscountFilter(discount)
+    console.log(discountItems)
 
     return (
         <div className={classes.container}>
@@ -74,7 +77,7 @@ const Discounts = () => {
                 <div className={classes.holderCards}>
 
                     {
-                        discount.map((product)=> <DiscountCards key={product.id} data={product}/>)
+                        discountItems.map((product)=> <DiscountCards key={product.id} data={product}/>)
                     }
 
                 </div>

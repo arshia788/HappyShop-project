@@ -11,6 +11,12 @@ const discountsFilter=(items)=>{
     return filterDis
 }
 
+const itemsDiscountFilter=(items)=>{
+    const [a, b, c, d]= items
+    const finalItems= [a, b, c, d]
+    return finalItems
+}
+
 const splitNumber=(number)=>{
     const spilNumber= Number(number.toFixed(3)).toLocaleString() + ' $'
     return spilNumber
@@ -95,7 +101,7 @@ const purchaseQtyCards=(data)=>{
 
 
 
-export { headPhones, discountsFilter,  qtyCheck, itemQty,
+export { headPhones, discountsFilter,itemsDiscountFilter,  qtyCheck, itemQty,
     splitNumber, diorFilter, perfumeFilter, 
     filterBoxPerfumes, findTag, inAddItems, findThrePic,
     purchaseQtyCards, 

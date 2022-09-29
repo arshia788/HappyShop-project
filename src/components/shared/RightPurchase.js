@@ -2,6 +2,8 @@ import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core';
 
+// function
+import { splitNumber } from '../../helper/function';
 
 import { ContextProvider } from '../../context/ItemContextProvider';
 
@@ -73,7 +75,7 @@ const RightPurchase = () => {
                     {
                         state.itemsCounter > 0 &&<div className={classes.box}>
                             <p style={{marginBottom:'10px'}}><span style={{color:'seagreen', fontSize:'1.1rem'}}>total items:</span> {state.itemsCounter}</p>
-                            <p style={{marginBottom:'20px'}}><span style={{color:'seagreen', fontSize:'1.1rem'}}>total payment:</span> {state.total} $</p>
+                            <p style={{marginBottom:'20px'}}><span style={{color:'seagreen', fontSize:'1.1rem'}}>total payment:</span> {splitNumber(state.total)}</p>
 
                             <div style={{display:'flex', justifyContent:'space-between'}}>
                                 <button className={classes.btnLeft} onClick={()=> dispatch({type:'checkout'})}>clear</button>
